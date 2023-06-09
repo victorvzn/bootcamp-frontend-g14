@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Formularios + Inputs + Validaciones</h1>
+
+    <form>
+      <h2>Inputs</h2>
+      <label for="text1">Input tipo texto</label>
+      <input type="text" placeholder="Ingrese algun texto" id="text1" name="texto" />
+      <label>
+        Input (Desactivados)
+        <input type="text" placeholder="Ingrese algun texto" disabled />
+      </label>
+      <label>
+        Input (Solo lectura)
+        <input type="text" placeholder="Input de solo lectura" readonly value="Solo lectura" />
+      </label>
+      <label>
+        Input tipo number
+        <input type="number" placeholder="Edad Ej. 18" name="edad" />
+      </label>
+      <label>
+        Input tipo email
+        <input type="email" placeholder="Correo Ej. soyvictor@gmail.com" />
+      </label>
+      <label>
+        Input tipo range (Edad)
+        <input type="range" />
+      </label>
+      <label>
+        Input tipo tel
+        <input type="tel" placeholder="(51) 999999999" />
+      </label>
+      <label>
+        Input tipo url
+        <input type="url" placeholder="Sitio web" />
+      </label>
+      <label>
+        Input tipo password
+        <input type="password" placeholder="Password" />
+      </label>
+      <label>
+        Input tipo color
+        <input type="color" />
+      </label>
+      <label>
+        Input tipo search
+        <input type="search" />
+      </label>
+      <label>
+        Input tipo file (Seleccionar cualquier archivo)
+        <input type="file" />
+      </label>
+      <label>
+        Input tipo file (Seleccione solamente imagenes)
+        <input type="file" accept="image/*" />
+      </label>
+      <label>
+        Input tipo file (Seleccione solamente .jpg)
+        <input type="file" accept=".jpg, .jpeg" />
+      </label>
+      <label>
+        Input tipo file (Seleccione multiples archivos)
+        <input type="file" accept=".jpg, .jpeg" multiple />
+      </label>
+
+      <input type="hidden" value="datos-ocultos" />
+
+      <input type="submit" value="Guardar" />
+      <input type="reset" value="Limpiar" />
+    </form>
+
+    <form>
+      <h2>Input tipo fecha</h2>
+
+      <label>
+        Input tipo datetime-local (Fecha y hora)
+        <input type="datetime-local" name="fecha" />
+      </label>
+      <label>
+        Input tipo date (día)
+        <input type="date" name="dia" />
+      </label>
+      <label>
+        Input tipo week (semana)
+        <input type="week" name="semana" />
+      </label>
+      <label>
+        Input tipo week (mes)
+        <input type="month" name="mes" />
+      </label>
+
+      <input type="submit" value="Guardar" />
+    </form>
+
+    <form>
+      <h2>Textareas</h2>
+
+      <label>
+        <textarea placeholder="Escribe una descripción sobre ti..." rows="3" cols="4" name="biografia"></textarea>
+      </label>
+      <label>
+        <textarea placeholder="Escribe una descripción sobre ti..." rows="6" disabled name="biografia2"></textarea>
+      </label>
+
+      <input type="submit" value="Guardar" />
+    </form>
+
+    <form>
+      <h2>Selects</h2>
+
+      <label>
+        Comida favorita
+        <select name="comidas">
+          <option value="">Seleciona tu comida favorita...</option>
+          <option value="fr">Francesa</option>
+          <option value="it">Italiana</option>
+          <option value="jp">Japonesa</option>
+          <option value="pe">Peruana</option>
+          <option value="th">Tailandesa</option>
+        </select>
+      </label>
+
+      <input type="submit" value="Guardar" />
+    </form>
+
+    <form>
+      <h2>Checkboxes</h2>
+
+      <h3>Lenguaje de preferencia:</h3>
+      <label>
+        <input type="checkbox" name="english" value="en" checked />
+        Inglés
+      </label>
+      <label>
+        <input type="checkbox" name="spanish" value="es" />
+        Español
+      </label>
+      <label>
+        <input type="checkbox" name="dothraki" value="do" disabled />
+        Dothraki
+      </label>
+
+      <input type="submit" value="Guardar" />
+    </form>
+
+    <form>
+      <h2>Radio buttons</h2>
+      <blockquote><b>NOTA:</b> Los radio buttons que se desean agrupar deber tener el mismo atributo name.</blockquote>
+      <label>
+        <input type="radio" name="language1" value="en" />
+        Inglés
+      </label>
+      <label>
+        <input type="radio" name="language1" value="en" checked />
+        Español
+      </label>
+      <label>
+        <input type="radio" name="language1" value="du" />
+        Neerlandés
+      </label>
+      <label>
+        <input type="radio" name="language2" value="th" />
+        Thailandes
+      </label>
+      <label>
+        <input type="radio" name="language2" value="kl" />
+        Klingon
+      </label>
+      <label>
+        <input type="radio" name="language2" value="qu" disabled />
+        Quechua 
+      </label>
+
+      <input type="submit" value="Guardar" />
+    </form>
+  </main>
+</body>
+</html>
