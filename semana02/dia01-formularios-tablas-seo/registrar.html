@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <title>Register</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@next/css/pico.min.css"
+  /> 
   <style>
     main {
       display: flex;
@@ -18,32 +21,47 @@
 <body>
   <main class="container">
     <form>
+      <figure>
+        <img src="https://placehold.co/80.png?text={vv}" />
+      </figure>
       <hgroup>
-        <h1>Login</h1>
-        <h2>Ingresa la información con la que te registraste.</h2>
+        <h1>Crea una cuenta</h1>
+        <h2>Ingresa la siguiente información para registrarte.</h2>
       </hgroup>
+
+      <div class="grid">
+        <div>
+          <label>
+            <input name="text" placeholder="Nombres" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            <input name="text" placeholder="Apellidos" required />
+          </label>
+        </div>
+      </div>
+
       <label>
-        Email
-        <input type="email" placeholder="user@gmail.com" required />
-      </label>
-      <label>
-        Password
-        <input type="password" placeholder="Ingresa tu password" required minlength="6" />
+        <input name="email" placeholder="Email: Ej. user@gmail.com" required />
       </label>
 
       <label>
-        <input type="checkbox" name="remember" />
-        Recuérdame
+        <input type="tel" placeholder="Teléfono" id="telefono" name="telefono" />
       </label>
 
-      <input type="submit" value="Ingresar" />
+      <label>
+        <input type="password" name="password" placeholder="Password" required minlength="6" />
+      </label>
+
+      <label>
+        <input type="password" name="password" placeholder="Confirmar password" required minlength="6" />
+      </label>
+
+      <input type="submit" value="Registrarse" />
 
       <p>
-        No recuerdas tu contraseña? <a href="registrar.html">Recuperala aquí</a>
-      </p>
-
-      <p>
-        No tienes una cuenta? <a href="registrar.html">Registrate aquí</a>
+        Ya tienes una cuenta? <a href="login.html">Accede desde aquí</a>
       </p>
     </form>
   </main>
