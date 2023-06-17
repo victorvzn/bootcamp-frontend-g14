@@ -74,7 +74,6 @@ img {
 .hero {
   /* border: 1px solid red; */
   margin: 0 auto;
-  margin-top: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -86,6 +85,7 @@ img {
   background: var(--primary-dark-blue-into) url(../images/bg-curvy-desktop.svg) no-repeat bottom;
   background-size: contain;
   padding-top: 3rem;
+  padding-bottom: 12rem;
 }
 
 .hero__title {
@@ -121,4 +121,28 @@ img {
       var(--accent-blue-gradient) 35%
     )
   ;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 340px 340px;
+  justify-content: center;
+  gap: 5rem;
+  background-color: var(--primary-dark-blue-main);
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature__title {
+  font-family: var(--font-primary);
+}
+
+.feature__text {
+  font-family: var(--font-secondary);
 }
