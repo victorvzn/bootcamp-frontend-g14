@@ -273,7 +273,6 @@ img {
   gap: 2rem;
   margin: 0 auto;
   width: min(100% - 3rem, 76rem);
-  border: 1px solid red;
 }
 
 .footer_info {
@@ -312,5 +311,19 @@ img {
 .footer_info__social {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   gap: 1.5rem;
+}
+
+.footer_info__social a {
+  border: 1px solid var(--neutral-white);
+  border-radius: 50%;
+  padding: 3px;
+  width: 32px;
+  height: 32px;
+}
+.footer_info__social a:hover,
+.footer_info__social a:hover path {
+  border: 1px solid var(--accent-cyan-gradient);
+  fill: var(--accent-cyan-gradient);
 }
