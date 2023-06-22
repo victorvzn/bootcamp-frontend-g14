@@ -193,6 +193,7 @@ img {
 
   padding: 0 3rem;
   padding-top: 8rem;
+  padding-bottom: 15rem;
   background-color: var(--primary-dark-blue-main);
   gap: 3rem;
 
@@ -260,10 +261,67 @@ img {
   font-weight: var(--font-weight-regular);
 }
 
+.access {
+  font-family: var(--font-primary);
+  width: min(100% - 3rem, 53rem);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-dark-blue-testimonials);
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.6);
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+
+.access h2 {
+  font-size: 2rem;
+}
+
+.access p {
+  text-align: center;
+}
+
+.access input[type=text] {
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem 2rem;
+  min-width: 30rem;
+}
+
+.access input[type=submit] {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  line-height: 1.5;
+  min-width: 220px;
+  color: var(--neutral-white);
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent-cyan-gradient) 0%,
+      var(--accent-blue-gradient) 35%
+    )
+  ;
+}
+
+.access form {
+  display: flex;
+  gap: 2rem;
+}
+
 .footer {
+  position: relative;
   font-family: var(--font-secondary);
   background-color: var(--primary-dark-blue-footer);
-  padding: 10rem 0 5rem 0;
+  padding: 15rem 0 5rem 0;
 }
 
 .footer--wrapper {
