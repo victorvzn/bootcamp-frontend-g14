@@ -259,3 +259,19 @@ img {
 .termimonial_profile h5 {
   font-weight: var(--font-weight-regular);
 }
+
+.footer {
+  font-family: var(--font-secondary);
+  background-color: var(--primary-dark-blue-footer);
+  padding: 10rem 0 5rem 0;
+}
+
+.footer--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 0 auto;
+  width: min(100% - 3rem, 76rem);
+  border: 1px solid red;
+}
