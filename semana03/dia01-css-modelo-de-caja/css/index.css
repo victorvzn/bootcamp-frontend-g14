@@ -275,3 +275,42 @@ img {
   width: min(100% - 3rem, 76rem);
   border: 1px solid red;
 }
+
+.footer_info {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  /* grid-template-columns: repeat(5, 1fr); */
+  grid-template-columns: 2fr 1fr 0.5fr 0.5fr 1fr;
+  gap: 5rem;
+}
+
+.footer_info__description {
+  width: 22rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.footer_info__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer_info__contact span {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer_info__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer_info__social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
