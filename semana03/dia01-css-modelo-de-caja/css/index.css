@@ -220,6 +220,16 @@ img {
   z-index: 20;
 }
 
+.testimonial--wrapperquote {
+  position: relative;
+}
+
+.testimonial--wrapperquote .testimonial__quote {
+  position: absolute;
+  top: -35px;
+  left: -10px;
+}
+
 .testimonial--quote::after {
   content: '';
   display: block;
