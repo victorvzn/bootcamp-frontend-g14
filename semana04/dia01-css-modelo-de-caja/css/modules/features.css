@@ -1,0 +1,36 @@
+.features {
+  display: grid;
+  grid-template-columns: 340px;
+  justify-content: center;
+  gap: 5rem;
+  background-color: var(--primary-dark-blue-main);
+}
+
+/*
+576px -> pantallas pequeñas (celulares)
+768px -> pantallas pequeñas (tablets y ceulares)
+992px -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: 340px 340px;
+  }
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature__title {
+  font-family: var(--font-primary);
+}
+
+.feature__text {
+  font-family: var(--font-secondary);
+}

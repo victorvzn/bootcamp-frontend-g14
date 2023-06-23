@@ -1,0 +1,69 @@
+.access {
+  font-family: var(--font-primary);
+  width: min(100% - 3rem, 53rem);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-dark-blue-testimonials);
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.6);
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.access h2 {
+  font-size: 2rem;
+}
+
+.access input[type=text] {
+  background-color: var(--neutral-white);
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem 2rem;
+  min-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .access form {
+    width: 100%;
+  }
+  .access input[type=text] {
+    min-width: 30rem;
+  }
+}
+
+.access input[type=submit] {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  line-height: 1.5;
+  min-width: 220px;
+  color: var(--neutral-white);
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent-cyan-gradient) 0%,
+      var(--accent-blue-gradient) 35%
+    )
+  ;
+}
+
+.access form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .access form {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,27 @@
+:root, html[data-theme='dark'] {
+  color-scheme: light dark;
+
+  /* FONTS */
+  --font-primary: 'Raleway', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+  --font-size: 14px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* COLORS */
+
+  --primary-dark-blue-into: hsl(217, 28%, 15%);
+  --primary-dark-blue-main: hsl(218, 28%, 13%);
+  --primary-dark-blue-footer: hsl(216, 53%, 9%);
+  --primary-dark-blue-testimonials: hsl(219, 30%, 18%);
+  
+  --accent-cyan-gradient: hsl(176, 68%, 64%);
+  --accent-blue-gradient: hsl(198, 60%, 50%);
+  --accent-light-red: hsl(0, 100%, 63%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+html[data-theme='light'] {
+  --primary-dark-blue-into: blue;
+}
