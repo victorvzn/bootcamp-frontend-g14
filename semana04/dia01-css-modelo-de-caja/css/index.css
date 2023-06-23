@@ -320,21 +320,28 @@ img {
   align-items: center;
   gap: 2rem;
   border-radius: 1rem;
+  text-align: center;
 }
 
 .access h2 {
   font-size: 2rem;
 }
 
-.access p {
-  text-align: center;
-}
-
 .access input[type=text] {
+  background-color: var(--neutral-white);
   border-radius: 1.5rem;
   border: none;
   padding: 1rem 2rem;
-  min-width: 30rem;
+  min-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .access form {
+    width: 100%;
+  }
+  .access input[type=text] {
+    min-width: 30rem;
+  }
 }
 
 .access input[type=submit] {
@@ -459,3 +466,4 @@ img {
 #menu-toggle:checked + .navigation .header__nav {
   flex-direction: column;
 }
+
