@@ -192,7 +192,13 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 33rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .how_works {
+    width: 33rem;
+  }
 }
 
 .how_works__title {
