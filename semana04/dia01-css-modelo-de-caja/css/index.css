@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
-:root {
+:root, html[data-theme='dark'] {
+  color-scheme: light dark;
+
   /* FONTS */
   --font-primary: 'Raleway', sans-serif;
   --font-secondary: 'Open Sans', sans-serif;
@@ -21,6 +23,11 @@
 
   --neutral-white: hsl(0, 0%, 100%);
 }
+
+html[data-theme='light'] {
+  --primary-dark-blue-into: blue;
+}
+
 
 * {
   box-sizing: border-box;
@@ -427,4 +434,22 @@ img {
 .footer_info__social a:hover path {
   border: 1px solid var(--accent-cyan-gradient);
   fill: var(--accent-cyan-gradient);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + .navigation {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  background: var(--accent-blue-gradient);
+  right: 0;
+  text-align: center;
+}
+
+#menu-toggle:checked + .navigation .header__nav {
+  flex-direction: column;
 }
