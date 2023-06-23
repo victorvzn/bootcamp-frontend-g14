@@ -9,7 +9,7 @@
 
   text-align: center;
 
-  background: var(--primary-dark-blue-into) url(../images/bg-curvy-desktop.svg) no-repeat bottom;
+  background: var(--primary-dark-blue-into) url(../../images/bg-curvy-desktop.svg) no-repeat bottom;
   background-size: contain;
   padding-top: 3rem;
   padding-bottom: 12rem;

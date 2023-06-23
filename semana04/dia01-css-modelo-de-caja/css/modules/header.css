@@ -40,3 +40,12 @@
 #menu-toggle:checked + .navigation .header__nav {
   flex-direction: column;
 }
+
+@media (min-width: 768px) {
+  .navigation {
+    display: block;
+  }
+  .header label {
+    display: none;
+  }
+}
