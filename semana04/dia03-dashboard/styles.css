@@ -17,11 +17,11 @@ body {
   height: 100vh;
 
   display: grid;
-  grid-template-columns: var(--sidebarWidth, 300px) 1fr;
+  grid-template-columns: var(--sidebarWidth, 300px) 1fr var(--settingsWidth, 0px);
   grid-template-rows: 60px 1fr;
 
   grid-template-areas:
-    "side header side2"
+    "side header header"
     "side main side2";
   
   transition: 300ms;
@@ -51,12 +51,20 @@ body {
   background-color: var(--bg-2);
 
   grid-area: side;
-
-  
 }
 
 body:has(.sidebar--open) {
   --sidebarWidth: 100px;
+}
+
+.settings {
+  background-color: var(--bg-2);
+
+  grid-area: side2;
+}
+
+body:has(.settings--open) {
+  --settingsWidth: 200px;
 }
 
 .main {
