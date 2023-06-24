@@ -17,27 +17,47 @@ body {
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: var(--sidebarWidth, 300px) 1fr;
   grid-template-rows: 60px 1fr;
 
   grid-template-areas:
     "side header side2"
     "side main side2";
+  
+  transition: 300ms;
 }
 
 .header {
   background-color: var(--bg-1);
 
   grid-area: header;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
 }
 
+.header__button-menu,
+.header__button-settings {
+  cursor: pointer;
+}
+
+.header svg {
+  fill: #FFF;
+}
 
 .sidebar {
   background-color: var(--bg-2);
 
   grid-area: side;
+
+  
 }
 
+body:has(.sidebar--open) {
+  --sidebarWidth: 100px;
+}
 
 .main {
   background-color: var(--bg-3);
