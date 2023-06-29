@@ -1,0 +1,11 @@
+@mixin default-border {
+  border: 5px solid blue;
+}
+
+@mixin custom-border ($width, $color, $is-solid: true) {
+  @if $is-solid {
+    border: $width solid $color;
+  } @else {
+    border: $width dashed $color;
+  }
+}
