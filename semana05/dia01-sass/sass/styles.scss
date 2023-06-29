@@ -1,0 +1,16 @@
+$primary-color: #FFA559;
+
+body {
+  background-color: $primary-color;
+  text-align: center;
+}
+
+$card-bg: #fff;
+$card-border-color: #454545;
+$card-border-radius: 4px;
+
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+}
