@@ -25,4 +25,32 @@ a {
   margin: 0 auto;
 }
 
+.header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  color: #FFB742;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header__menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 10px;
+  margin: 10px;
+}
+.header__menu a {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: color ease 0.3s;
+}
+.header__menu--active, .header__menu a:hover {
+  color: #FFB742;
+  border-bottom: 3px solid #FFB742;
+}
+
 /*# sourceMappingURL=styles.css.map */
