@@ -1,0 +1,38 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem; // 40px
+  padding: 4rem; // 64px
+
+  &--bg {
+    background: $primary-color-blue2 url(../../images/bg.svg) no-repeat bottom;
+    background-size: contain;
+  }
+
+  &__gretting {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    text-transform: capitalize;
+  }
+
+  &__gretting span {
+    color: $primary-color-gold;
+    text-decoration: underline;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    text-transform: capitalize;
+  }
+  
+  &__description {
+    font-size: 1.5rem;
+    font-weight: $font-weight-regular;
+  }
+
+  &__photo {
+    border-radius: 100%;
+  }
+}

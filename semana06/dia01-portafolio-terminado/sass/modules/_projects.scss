@@ -1,0 +1,105 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 10rem 2rem;
+
+  &__tag {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-color-gold;
+    padding: .3rem 1.5rem;
+
+    border-radius: 3.125rem;
+    background: $primary-color-blue3;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 2rem;
+
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+
+    margin: 2rem;
+  }
+
+  &__tab-item {
+    border-bottom: 3px solid transparent;
+    transition: all ease .3s;
+  }
+
+  .header__menu a.header__menu--active,
+  &__tab-item--active,
+  &__tab-item:hover {
+    color: $primary-color-gold;
+    border-bottom: 3px solid $primary-color-gold;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.project-item {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.project-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 0;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  transition: all ease .3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  & h4 {
+    font-size: 3rem;
+  } 
+
+  & p {
+    font-size: 1rem;
+    font-weight: $font-weight-regular;
+  } 
+
+  & div {
+    display: flex;
+    gap: 3rem;
+    
+    padding: 3rem 0;
+    
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  & div svg {
+    fill: #fff;
+  }
+}

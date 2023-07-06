@@ -1,0 +1,22 @@
+.stack {
+  display: flex;
+  gap: 1.5rem;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 7rem;
+    height: 7rem;
+
+    border-radius: 0.5rem; // 8px
+    background-color: $primary-color-blue2;
+  }
+}

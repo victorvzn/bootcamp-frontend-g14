@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  align-items: center;
+
+  padding: 2rem 0;
+  
+  font-family: $font-primary;
+
+  &--bg {
+    background: $primary-color-blue2 url(../images/bg.svg) no-repeat bottom;
+    background-size: contain;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    color: $primary-color-gold;
+  }
+
+  &__copyright {
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+  }
+}

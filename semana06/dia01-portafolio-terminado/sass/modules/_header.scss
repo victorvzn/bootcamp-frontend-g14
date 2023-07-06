@@ -1,8 +1,7 @@
 .header {
-  border: 1px solid red;
-
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__logo { // .header__logo
     color: $primary-color-gold;
@@ -32,6 +31,31 @@
   &__menu a:hover {
     color: $primary-color-gold;
     border-bottom: 3px solid $primary-color-gold;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__action {
+    width: 2.75rem;
+    height: 2.75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__action:hover {
+    border-radius: 100%;
+    background-color: $primary-color-blue1;
+  }
+
+  &__action--dark-selected {
+    border: none;
+    border-radius: 100%;
+    background-color: $primary-color-blue3;
   }
 }
 
