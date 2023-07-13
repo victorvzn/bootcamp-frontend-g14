@@ -4,34 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <main>
-    <h1>Calculadora</h1>
+  <main class="w-80 bg-orange-100 text-center my-0 mx-auto mt-5 p-5 rounded-md">
+    <h1 class="text-3xl font-bold underline mb-5">Calculadora</h1>
 
-    <section>
-      <input class="display" type="text" readonly value="0" />
+    <section class="flex flex-col gap-3">
+      <input class="display border p-1 text-right text-xl" type="text" readonly value="0" />
 
-      <div>
-        <button>+</button>
-        <button>-</button>
-        <button>*</button>
+      <div class="grid grid-cols-3 gap-2">
+        <button class="bg-red-300 p-2 hover:bg-red-400">+</button>
+        <button class="bg-red-300 p-2 hover:bg-red-400">-</button>
+        <button class="bg-red-300 p-2 hover:bg-red-400">*</button>
         
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">7</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">8</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">9</button>
 
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">4</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">5</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">6</button>
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">1</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">2</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">3</button>
 
-        <button>0</button>
-        <button>AC</button>
-        <button>=</button>
+        <button class="bg-blue-300 p-2 hover:bg-blue-400">0</button>
+        <button class="bg-green-300 p-2 hover:bg-green-400">AC</button>
+        <button class="bg-green-300 p-2 hover:bg-green-400">=</button>
       </div>
     </section>
   </main>
