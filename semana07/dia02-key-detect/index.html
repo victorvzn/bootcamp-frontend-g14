@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detectando las teclas presionadas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div>
-    <div class="keycode">KEYCODE</div>
-    <div class="character">LETRA</div>
+  <div class="container mx-auto w-80 bg-yellow-300 p-5 flex flex-col items-center gap-5">
+    <div class="keycode bg-red-400 w-16 h-16 rounded-full flex justify-center items-center text-4xl text-white"></div>
+    <div class="character bg-red-300 w-16 h-16  flex justify-center items-center text-4xl text-white"></div>
   </div>
 
   <script>
