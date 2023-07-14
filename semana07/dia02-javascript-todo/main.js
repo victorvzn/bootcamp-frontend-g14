@@ -42,6 +42,8 @@ taskList.addEventListener('click', function(event) {
 
   if (target.tagName === 'INPUT' && target.type === 'checkbox') {
     target.classList.toggle('checked')
+
+    target.classList.add('container')
   }
 
   if (target.tagName === 'BUTTON') {
