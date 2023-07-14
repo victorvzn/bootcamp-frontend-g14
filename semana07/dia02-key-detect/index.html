@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detectando las teclas presionadas</title>
+</head>
+<body>
+  <div>
+    <div class="keycode">KEYCODE</div>
+    <div class="character">LETRA</div>
+  </div>
+
+  <script>
+    const keyCode = document.querySelector('.keycode')
+    const character = document.querySelector('.character')
+
+    document.addEventListener('keydown', function(event) {
+      console.log(event.key) // Letra
+      console.log(event.keyCode) // Codigo ASCII
+
+      keyCode.textContent = event.keyCode
+      character.textContent = event.key
+    })
+  </script>
+</body>
+</html>
