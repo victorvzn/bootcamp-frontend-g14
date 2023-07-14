@@ -1,7 +1,7 @@
 const taskInput = document.querySelector('.task__input')
 const taskList = document.querySelector('.task__list')
 
-const tasks = []
+let tasks = []
 
 taskInput.addEventListener('keypress', function(event) {
   // Lógica de la app
@@ -11,9 +11,16 @@ taskInput.addEventListener('keypress', function(event) {
     const value = event.target.value
     // console.log(value)
 
-    tasks.push(value)
+    const newTask = {
+      title: value,
+      done: false
+    }
 
-    // console.log(tasks)
+    console.log(newTask)
+
+    tasks.push(newTask)
+
+    console.log(tasks)
 
     taskInput.value = ''
 
@@ -21,20 +28,37 @@ taskInput.addEventListener('keypress', function(event) {
   }
 })
 
-function checkTarea(event) {
+function checkTask(event, currentIndex) {
   console.log('Funciona!')
   // TODO: Hacer que el todo se tache usando solo Javascript
+  event.target.parentElement.classList.toggle('isChecked')
+  const taskSelected = tasks[currentIndex]
+  taskSelected.done = !taskSelected.done
+
+  console.log(tasks)
+}
+
+function removeTask(event, currentIndex) {
+  console.log('Eliminando...', currentIndex)
+  event.target.parentElement.remove()
+  const newTasks = tasks.filter((task, index) => index !== currentIndex)
+  console.log(newTasks)
+  tasks = newTasks
 }
 
 function renderTasks() {
   let lista = ''
-  tasks.forEach(function (task) {
+  tasks.forEach(function (task, index) {
     // console.log(task)
     lista = lista + `
       <li>
-        <input type="checkbox" onchange="checkTarea()" />
-        <span>${task}</span>
-        <button>Borrar</button>
+        <input
+          type="checkbox"
+          onchange="checkTask(event, ${index})"
+          ${task.done ? 'checked' : ''}
+        />
+        <span>${task.title}</span>
+        <button onclick="removeTask(event, ${index})">Borrar</button>
       </li>
     `
   })
