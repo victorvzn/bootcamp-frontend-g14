@@ -1,5 +1,6 @@
 const taskInput = document.querySelector('.task__input')
 const taskList = document.querySelector('.task__list')
+const taskClear = document.querySelector('.task__clear')
 
 // localStorage.setItem('frutas', 'manzanas, peras, plátanos')
 // console.log(localStorage.getItem('frutas'))
@@ -7,18 +8,30 @@ const taskList = document.querySelector('.task__list')
 // let tasks = [
 //   {
 //     title: 'Estudiar Javascript',
-//     completado: false
+//     done: false
 //   },
 //   {
 //     title: 'Salir al receso a las 9:00pm',
-//     completado: true
+//     done: true
 //   },{
 //     title: 'Realizar el reto del fin de semana',
-//     completado: false
+//     done: false
 //   }
 // ]
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || []
+
+taskClear.addEventListener('click', function(event) {
+  const completedTasks = tasks.filter(task => task.done === false)
+
+  tasks = completedTasks
+
+  renderTasks()
+
+  console.log(completedTasks)
+
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+})
 
 taskInput.addEventListener('keypress', function(event) {
   // Lógica de la app
