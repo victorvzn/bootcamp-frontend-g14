@@ -4,12 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trivia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   
-  <main>
-    <h1>Trivia</h1>
+  <main class="w-96 mx-auto mt-10">
+    <h1 class="text-xl font-bold text-gray-900 text-center mb-4">
+      Trivia de Javascript
+    </h1>
+
+    <section class="flex flex-col px-4 py-6 mb-3 border rounded-lg shadow">
+      <p class="text-md font-medium text-gray-900 mb-4">¿Pregunta 1?</p>
+
+      <div class="flex flex-col items-start mb-10">
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta en estado sin responder 1</button>
+        <button type="button" class="text-white border border-red-600 bg-red-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta incorrecta 2</button>
+        <button type="button" class="text-white border border-green-600 bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta correcta 3</button>
+      </div>
+
+      <div class="flex justify-end">
+        <button type="button" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Siguiente pregunta</button>
+      </div>
+    </section>
+
+    <section class="flex flex-col px-4 py-6 mb-3 border rounded-lg shadow">
+      <p class="text-md font-medium text-gray-900 mb-4">¿Pregunta 2?</p>
+
+      <div class="flex flex-col items-start mb-10">
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta en estado sin responder 1</button>
+        <button type="button" class="text-white border border-red-600 bg-red-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta incorrecta 2</button>
+        <button type="button" class="text-white border border-green-600 bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta correcta 3</button>
+      </div>
+
+      <div class="flex justify-end">
+        <button type="button" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Siguiente pregunta</button>
+      </div>
+    </section>
+
+    <section class="flex flex-col px-4 py-6 mb-3 border rounded-lg shadow">
+      <p class="text-md font-medium text-gray-900 mb-4">¿Pregunta 3?</p>
+
+      <div class="flex flex-col items-start mb-10">
+        <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta en estado sin responder 1</button>
+        <button type="button" class="text-white border border-red-600 bg-red-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta incorrecta 2</button>
+        <button type="button" class="text-white border border-green-600 bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2 w-full">Respuesta correcta 3</button>
+      </div>
+
+      <div class="flex justify-end">
+        <button type="button" class="text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2">Mostrar resultados</button>
+      </div>
+    </section>
+
+    <section class="flex flex-col px-4 py-6 text-center bg-green-600 border rounded-lg shadow ">
+      <p class="text-4xl font-medium text-gray-900 mb-4 text-white">¡GANASTE! o ¡PERDISTE!</p>
+      
+      <p class="text-md font-medium text-gray-900 mb-4 text-white">Respondiste 2 de 3</p>
+
+      <p class="text-md font-medium text-gray-900 mb-4 text-white">Y este es tu puntaje: 20</p>
+
+      <img src="https://placehold.co/300x100" />
+
+      <div class="flex justify-end mt-10">
+        <button type="button" class="text-white border border-blue-300 bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left mr-2 mb-2">Empezar de nuevo</button>
+      </div>
+    </section>
   </main>
 
   <script src="./main.js"></script>
