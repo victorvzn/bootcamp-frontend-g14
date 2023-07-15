@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas Completo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-sm-4 col-8">
+
+        <div class="card mt-5">
+          <h5 class="card-header text-center">Listado de tareas</h5>
+
+          <div class="card-body">
+
+            <input
+              class="form-control task__input"
+              placeholder="Ingresa una tarea"
+            />
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end my-2">
+              <!-- TODO: al hacer click en el botón de abajo limpiar las tareas que ya fueran completadas  -->
+              <button class="btn btn-primary btn-sm task__clear">Limpiar tareas completadas</button>
+            </div>
+
+            <ul class="list-group task__list">
+              <!-- <li>
+                <input type="checkbox" />
+                <span>Estudiar Javascript</span>
+                <button>Borrar</button>
+              </li> -->
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
