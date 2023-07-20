@@ -2,7 +2,7 @@
 
 ### Requerimientos
 
-* [ ] Imprimir el listado de todos los nombres de los paises devueltos por el api [restcountries](https://restcountries.com/)
+* [x] Imprimir el listado de todos los nombres de los paises devueltos por el api [restcountries](https://restcountries.com/)
 * [ ] Mostrar en una grilla de 4 por 4 el listado de paises y la información básica de cada país (imagen de bandera, nombre del país, población, regíon y capital)
 * [ ] Usando una caja de texto buscar por el nombre del pais
 * [ ] Usando una lista de selección filtrar los paises por región (Africa, Americas, Asia, Europa y Oceania)
