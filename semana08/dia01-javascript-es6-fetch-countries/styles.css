@@ -42,3 +42,61 @@ h1 {
   align-items: center;
   padding: 1rem 0;
 }
+
+.app__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+}
+
+/*
+  576px -> pantallas pequeñas (celulares)
+  768px -> pantallas pequeñas (tablets y ceulares)
+  992px -> pantallas medianas (Desktop)
+  1200px -> pantallas grandes (Desktops, TVs)
+*/
+
+@media screen and (min-width: 768px) {
+  .app__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .app__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.country {
+  border-radius: .5rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 1px 1px 3px #f1f1f1;
+}
+
+.country__flag {
+  border-radius: .5rem .5rem 0 0;
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  box-shadow: 0px 1px 1px #f1f1f1;
+}
+
+.country__wrapper {
+  padding: 1.5rem;
+}
+
+.country__title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.country__description {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.app__footer {
+  text-align: center;
+  padding: 1rem;
+}
