@@ -11,7 +11,7 @@ export const renderCountries = function (countries) {
         <div class="country__wrapper">
           <h2 class="country__title">${country.name.common}</h2>
           <div class="country__description">
-            <strong>Population:</strong> ${country.name.common}
+            <strong>Population:</strong> ${country.population}
           </div>
           <div class="country__description">
             <strong>Region:</strong> ${country.region}
