@@ -4,7 +4,7 @@ export const renderCountries = function (countries) {
   let countryList = ''
 
   countries.forEach(country => {
-    console.log(country)
+    // console.log(country)
     countryList += `
       <div class="country">
         <img class="country__flag" src="${country.flags.png}" alt="${country.name.common}" />
