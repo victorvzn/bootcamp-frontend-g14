@@ -66,4 +66,42 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   scrollTopButton.style.visibility = 'hidden'
   scrollTopButton.style.opacity = 0
+
+  const countryMoreInfoButtons = document.querySelectorAll('.country__moreinfo')
+  const dialog = document.querySelector('.app__dialog')
+  const dialogBody = document.querySelector('.dialog__body')
+  const dialogClose = document.querySelector('.dialog__close')
+
+  countryMoreInfoButtons.forEach(moreInfoButton => {
+    moreInfoButton.addEventListener('click', (event) => {
+      // console.log(event)
+      const { countryName } = event.target.dataset
+      // console.log(valueData)
+
+      const countryFound = countryData.find(
+        country => country.name.common === countryName
+      )
+
+      // console.log(countryFound)
+      
+      const { flags: { svg }, name: { official } } = countryFound
+
+      // console.log(svg, official)
+
+      dialogBody.innerHTML = `
+        <img src="${svg}" width="400" height="200" />
+        <h2>${official}</h2>
+        <p><strong>Language(s):</strong> ---</p>
+        <p><strong>Capital:</strong> ---</p>
+        <p><strong>Currencies(s):</strong> ---</p>
+        <p><strong>Timezone(s):</strong> ---</p>
+      `
+
+      dialog.showModal()
+    })
+  });
+
+  dialogClose.addEventListener('click', (event) => {
+    dialog.close()
+  })
 })

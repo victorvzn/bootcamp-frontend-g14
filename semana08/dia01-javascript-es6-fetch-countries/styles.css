@@ -123,3 +123,18 @@ h1 {
   text-align: center;
   padding: 1rem;
 }
+
+.app__dialog {
+  border: 0;
+  padding: 1rem;
+  margin: auto auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app__dialog::backdrop {
+  background-color: rgb(0, 0, 0, .6);
+  backdrop-filter: blur(0.25rem);
+}
