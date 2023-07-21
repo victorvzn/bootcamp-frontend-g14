@@ -3,6 +3,7 @@ import { fetchCountries } from './services.js'
 import { renderCountries } from './utils.js'
 
 const searchInput = document.querySelector('.app__search')
+const filterSelect = document.querySelector('.app__filter')
 
 let countryData = []
 
@@ -22,6 +23,21 @@ searchInput.addEventListener('input', (event) => {
   })
 
   renderCountries(filteredCountries)
+})
+
+filterSelect.addEventListener('input', (event) => {
+  const value = event.target.value
+
+  console.log(value)
+
+  const filteredCountriesByRegion = countryData.filter(country => {
+    const loweredRegion = country.region.toLowerCase()
+    const loweredValue = value.toLowerCase()
+
+    return loweredRegion.includes(loweredValue)
+  })
+
+  renderCountries(filteredCountriesByRegion)
 })
 
 document.addEventListener('DOMContentLoaded', async () => {
