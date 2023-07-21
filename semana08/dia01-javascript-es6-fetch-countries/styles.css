@@ -7,6 +7,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +69,19 @@ h1 {
   }
 }
 
+.app__list--no-found {
+  grid-template-columns: 1fr;
+  background-color: #f1f1f1;
+  padding: 20vh 0;
+  display: grid;
+  place-items: center;
+  /* justify-items: center; */
+  /* align-items: center; */
+  gap: .5rem;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
 .country {
   border-radius: .5rem;
   background-color: hsl(0, 0%, 100%);
@@ -94,6 +108,15 @@ h1 {
 .country__description {
   font-size: .9rem;
   margin-bottom: 1rem;
+}
+
+.app_scrolltop {
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, .5);
+  transition: visibility 0s, opacity 0.5s ease-in-out;
 }
 
 .app__footer {

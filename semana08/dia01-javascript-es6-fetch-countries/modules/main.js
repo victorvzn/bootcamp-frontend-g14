@@ -4,6 +4,7 @@ import { renderCountries } from './utils.js'
 
 const searchInput = document.querySelector('.app__search')
 const filterSelect = document.querySelector('.app__filter')
+const scrollTopButton = document.querySelector('.app_scrolltop')
 
 let countryData = []
 
@@ -40,6 +41,17 @@ filterSelect.addEventListener('input', (event) => {
   renderCountries(filteredCountriesByRegion)
 })
 
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    // console.log('Scrolling....', window.scrollY)
+    scrollTopButton.style.visibility = 'visible'
+    scrollTopButton.style.opacity = 1
+  } else {
+    scrollTopButton.style.visibility = 'hidden'
+    scrollTopButton.style.opacity = 0
+  }
+})
+
 document.addEventListener('DOMContentLoaded', async () => {
   // console.log('EL DOM se cargo totalmente')
 
@@ -51,4 +63,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   countryData = data
 
   renderCountries(data)
+
+  scrollTopButton.style.visibility = 'hidden'
+  scrollTopButton.style.opacity = 0
 })

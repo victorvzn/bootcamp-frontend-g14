@@ -3,6 +3,17 @@ export const renderCountries = function (countries) {
 
   let countryList = ''
 
+  if (countries.length === 0) {
+    countryListElement.classList.add('app__list--no-found')
+    countryListElement.innerHTML = `
+      <img src="./images/icon-sad-square.svg" width="100" height="100" />
+      Sorry, no results found!
+    `
+    return
+  }
+
+  countryListElement.classList.remove('app__list--no-found')
+
   countries.forEach(country => {
     // console.log(country)
     countryList += `
