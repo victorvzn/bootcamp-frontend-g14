@@ -33,28 +33,20 @@
   ],
   "movies": [
     {
-      "id": 1,
-      "name": "Barbie",
-      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
-      "release": "2023-07-21",
-      "genreId": 1,
-      "resumen": "Resumen de prueba"
+      "name": "The Super Mario Bros. Movie",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "release": "2023-04-05",
+      "genreId": 3,
+      "resumen": "Resumen de prueba para la peli de mario",
+      "id": 5
     },
     {
-      "id": 2,
-      "name": "Transformers: Rise of the Beasts",
-      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
-      "release": "2023-06-08",
+      "name": "ssss",
+      "image": "ssss",
+      "release": "2023-07-16",
       "genreId": 2,
-      "resumen": "Resumen de prueba"
-    },
-    {
-      "id": 3,
-      "name": "Mission: Impossible - Dead Reckoning Part One",
-      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
-      "release": "2023-07-13",
-      "genreId": 2,
-      "resumen": "Resumen de prueba"
+      "resumen": "sss",
+      "id": 7
     }
   ]
 }

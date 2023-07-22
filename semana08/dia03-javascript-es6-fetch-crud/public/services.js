@@ -9,3 +9,15 @@ export const fetchMovies = async () => {
 
   return data
 }
+
+export const deleteMovie = async (id) => {
+  const url = `http://localhost:3000/movies/${id}`
+
+  const options = {
+    method: 'DELETE'
+  }
+
+  const response = await fetch(url, options)
+
+  return response.json()
+}
