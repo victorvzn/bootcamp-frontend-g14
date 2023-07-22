@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Películas con json-server</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li>
+        <strong>CRUD de Películas con json-server</strong>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="grid">
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody class="movies__list"></tbody>
+        </table>
+      </div>
+      <div>
+        columna 2
+      </div>
+    </div>
+  </div>
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
