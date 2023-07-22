@@ -36,10 +36,32 @@
         </table>
       </div>
       <div>
-        columna 2
+        <form id="moviesForm">
+          <h2>New movie</h2>
+
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="text" name="image" placeholder="URL image" required />
+          <input type="text" name="release" placeholder="Release" required />
+          <select name="genre" required>
+            <option value="">Select a genre...</option>
+            <option value="1">Comedy</option>
+            <option value="2">Action</option>
+            <option value="3">Animation</option>
+            <option value="4">Adventure</option>
+          </select>
+          <textarea name="resumen" placeholder="Resume"></textarea>
+
+          <input type="submit" value="Save" />
+          </textarea>
+        </form>
       </div>
     </div>
   </div>
+
+  <footer class="container-fluid">
+    Victor Villazón - Julio 2023
+  </footer>
+
   <script src="./main.js" type="module"></script>
 </body>
 </html>
