@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@themovieapi.com",
+      "password": "pass123"
+    },
+    {
+      "id": 2,
+      "name": "User",
+      "email": "user@themovieapi.com",
+      "password": "pass123"
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Comedy"
+    },
+    {
+      "id": 2,
+      "name": "Action"
+    },
+    {
+      "id": 3,
+      "name": "Animation"
+    },
+    {
+      "id": 4,
+      "name": "Adventure"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "name": "Barbie",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "release": "2023-07-21",
+      "genreId": 1,
+      "resumen": "Resumen de prueba"
+    },
+    {
+      "id": 2,
+      "name": "Transformers: Rise of the Beasts",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+      "release": "2023-06-08",
+      "genreId": 2,
+      "resumen": "Resumen de prueba"
+    },
+    {
+      "id": 3,
+      "name": "Mission: Impossible - Dead Reckoning Part One",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+      "release": "2023-07-13",
+      "genreId": 2,
+      "resumen": "Resumen de prueba"
+    }
+  ]
+}
