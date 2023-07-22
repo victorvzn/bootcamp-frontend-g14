@@ -9,6 +9,12 @@
     .fs-small {
       font-size: .8rem;
     }
+    .flex {
+      display: flex;
+    }
+    .gap-0\.5 {
+      gap: .5rem;
+    }
   </style>
 </head>
 <body>
@@ -29,7 +35,7 @@
               <th>#</th>
               <th>Image</th>
               <th>Name</th>
-              <th>Acciones</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody class="movies__list"></tbody>
@@ -39,6 +45,7 @@
         <form id="moviesForm">
           <h2>New movie</h2>
 
+          <input type="hidden" name="id" />
           <input type="text" name="name" placeholder="Name" required />
           <input type="text" name="image" placeholder="URL image" required />
           <input type="date" name="release" placeholder="Release" required />

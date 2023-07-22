@@ -1,0 +1,108 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Admin",
+        "email": "admin@themovieapi.com",
+        "password": "pass123"
+      },
+      {
+        "id": 1,
+        "nombre": "User",
+        "email": "user@themovieapi.com",
+        "password": "pass123"
+      }
+    ],
+    "generos": [
+      {
+        "id": 1,
+        "nombre": "Comedy"
+      },
+      {
+        "id": 2,
+        "nombre": "Action"
+      },
+      {
+        "id": 3,
+        "nombre": "Animation"
+      },
+      {
+        "id": 4,
+        "nombre": "Adventure"
+      }
+    ],
+    "peliculas": [
+      {
+        "id": 1,
+        "nombre": "Barbie",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+        "estreno": "2023-07-21",
+        "generoId": 1,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 2,
+        "nombre": "Transformers: Rise of the Beasts",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+        "estreno": "2023-06-08",
+        "generoId": 2,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 3,
+        "nombre": "Mission: Impossible - Dead Reckoning Part One",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+        "estreno": "2023-07-13",
+        "generoId": 2,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 4,
+        "nombre": "Guardians of the Galaxy Vol. 3",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+        "estreno": "2023-06-15",
+        "generoId": 2,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 5,
+        "nombre": "The Flash",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+        "estreno": "2023-06-15",
+        "generoId": 2,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 6,
+        "nombre": "Spider-Man: Across the Spider-Verse ",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+        "estreno": "2023-06-02",
+        "generoId": 3,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 7,
+        "nombre": "Indiana Jones and the Dial of Destiny",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg",
+        "estreno": "2023-06-30",
+        "generoId": 4,
+        "resumen": "Resumen de prueba"
+      },
+      {
+        "id": 8,
+        "nombre": "Elemental",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+        "estreno": "2023-06-15",
+        "generoId": 3,
+        "resumen": "In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common."
+      },
+      {
+        "id": 9,
+        "nombre": "The Super Mario Bros. Movie",
+        "imagen": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+        "estreno": "2023-04-05",
+        "generoId": 3,
+        "resumen": "Resumen de prueba"
+      }
+    ]
+  }

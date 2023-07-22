@@ -1,25 +1,7 @@
-import { fetchMovies } from "./services.js"
+import { fetchMovies, createMovie, updateMovie } from "./services.js"
 import { renderMovies } from "./movies.js"
 
 const moviesForm = document.getElementById('moviesForm')
-
-const createMovie = async (form) => {
-  const url = 'http://localhost:3000/movies'
-
-  const body = JSON.stringify(form) // Convierto a cadena el objeto del formulario
-
-  const options = {
-    method: 'POST', // Crear un nuevo registro
-    headers: {
-      'Content-type': 'application/json'
-    },
-    body
-  }
-
-  const response = await fetch(url, options)
-
-  return response.json()
-}
 
 moviesForm.addEventListener('submit', async (event) => {
   event.preventDefault()
@@ -28,6 +10,7 @@ moviesForm.addEventListener('submit', async (event) => {
 
   console.log(movieForm)
 
+  const id = movieForm.id.value
   const name = movieForm.name.value
   const image = movieForm.image.value
   const release = movieForm.release.value
@@ -44,14 +27,28 @@ moviesForm.addEventListener('submit', async (event) => {
     resumen
   }
 
-  const res = await createMovie(newMovie)
+  const isNew = !Boolean(id)
 
-  if (res) {
-    const movies = await fetchMovies()
+  if (isNew) {
+    const res = await createMovie(newMovie)
 
-    renderMovies(movies)
+    if (res) {
+      const movies = await fetchMovies()
 
-    moviesForm.reset()
+      renderMovies(movies)
+
+      moviesForm.reset()
+    }
+  } else {
+    const res = await updateMovie(id, newMovie)
+
+    if (res) {
+      const movies = await fetchMovies()
+
+      renderMovies(movies)
+
+      moviesForm.reset()
+    }
   }
 })
 

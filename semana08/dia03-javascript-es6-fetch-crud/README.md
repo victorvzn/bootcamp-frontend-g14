@@ -9,7 +9,7 @@
 * [x] Listar las peliculas en una tabla
 * [x] Usando un formulario crear una nueva pelicula 
 * [x] En el listado de películas permitir eliminar una película
-* [ ] Usando el mismo formulario Permitir que el usuario pueda editar y guardar unan pelicula existente
+* [x] Usando el mismo formulario Permitir que el usuario pueda editar y guardar unan pelicula existente
 
 
 ### Links

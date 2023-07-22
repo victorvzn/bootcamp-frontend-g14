@@ -1,4 +1,4 @@
-import { fetchMovies, deleteMovie } from "./services.js"
+import { fetchMovies, deleteMovie, getMovie } from "./services.js"
 
 export const renderMovies = (movies) => {
   const moviesList = document.querySelector('.movies__list')
@@ -30,8 +30,8 @@ export const renderMovies = (movies) => {
           </div>
         </td>
         <td>
-          <div>
-            <button class="movie__edit">✏</button>
+          <div class="flex gap-0.5">
+            <button class="movie__edit" data-id="${movie.id}">✏</button>
             <button class="movie__remove" data-id="${movie.id}">❌</button>
           </div>
         </td>
@@ -53,6 +53,29 @@ export const renderMovies = (movies) => {
         const movies = await fetchMovies()
 
         renderMovies(movies)
+      }
+    })
+  })
+
+  const updateButtons = document.querySelectorAll('.movie__edit')
+
+  updateButtons.forEach(button => {
+    button.addEventListener('click', async (event) => {
+      const id = event.target.dataset.id
+
+      const res = await getMovie(id)
+
+      if (res) {
+        const movieForm = document.forms['moviesForm']
+
+          console.log(res)
+
+          movieForm.id.value = res.id
+          movieForm.name.value = res.name
+          movieForm.image.value = res.image
+          movieForm.release.value = res.release
+          movieForm.genre.value = res.genreId
+          movieForm.resumen.value = res.resumen
       }
     })
   })
