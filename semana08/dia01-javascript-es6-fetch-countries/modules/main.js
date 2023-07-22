@@ -84,17 +84,30 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // console.log(countryFound)
       
-      const { flags: { svg }, name: { official } } = countryFound
+      const {
+        flags: { svg },
+        name: { official },
+        languages,
+        capital,
+        currencies,
+        timezones
+      } = countryFound
 
       // console.log(svg, official)
+
+      const parsedLanguages = Object.values(languages).splice(0, 3)
+      const parsedCurrencies = Object
+        .values(currencies)
+        .map(currency => `${currency.name} (${currency.symbol})`)
+        .join(', ')
 
       dialogBody.innerHTML = `
         <img src="${svg}" width="400" height="200" />
         <h2>${official}</h2>
-        <p><strong>Language(s):</strong> ---</p>
-        <p><strong>Capital:</strong> ---</p>
-        <p><strong>Currencies(s):</strong> ---</p>
-        <p><strong>Timezone(s):</strong> ---</p>
+        <p><strong>Language(s):</strong> ${parsedLanguages}</p>
+        <p><strong>Capital:</strong> ${capital}</p>
+        <p><strong>Currencies(s):</strong> ${parsedCurrencies}</p>
+        <p><strong>Timezone(s):</strong> ${timezones}</p>
       `
 
       dialog.showModal()

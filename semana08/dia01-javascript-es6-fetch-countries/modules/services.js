@@ -1,4 +1,4 @@
-const url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population'
+const url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population,languages,currencies,timezones'
 
 // export function fetchCountries () {
 //   return fetch(url) // Promise
