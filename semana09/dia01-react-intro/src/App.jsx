@@ -1,16 +1,15 @@
-import { useState } from 'react'
+import Counter from './Counter'
 import './App.css'
 
 function App() {
-  const [contador, setContador] = useState(1)
+  
 
   return (
     <>
       <h1>Counter</h1>
 
-      <button onClick={() => setContador(contador + 1)}>+</button>
-      <h2>{contador}</h2>
-      <button onClick={() => setContador(contador - 1)}>-</button>
+      <Counter iniciador={5} />
+      <Counter />
     </>
   )
 }
