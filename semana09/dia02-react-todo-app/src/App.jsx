@@ -31,16 +31,34 @@ function App() {
   ]
 
   const [todos, setTodos] = useState(DEFAULT_TODOS)
+  const [input, setInput] = useState('')
+
+  const handleChange = (event) => {
+    const value = event.target.value
+    console.log(value)
+    setInput(value)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    console.log('Estoy funcionando....')
+  }
 
   return (
     <>
       <main className="w-full max-w-sm mx-auto mt-10 rounded-lg bg-yellow-100 border border-yellow-600 p-4 shadow-lg">
         <h1 className="text-2xl font-bold">TODO APP</h1>
 
-        <input
-          className="w-full border my-3 p-3"
-          placeholder="¿Qué deseas hacer hoy?"
-        />
+        <form onSubmit={handleSubmit}>
+          <input
+            className="w-full border my-3 p-3"
+            placeholder="¿Qué deseas hacer hoy?"
+            onChange={handleChange}
+          />
+        </form>
+
+        <pre>*{input}*</pre>
 
         <section className="mt-5">
           <ul className="flex flex-col gap-3">
