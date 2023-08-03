@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { TrashIcon } from "./components/Icons.jsx"
 
 function App() {
 
