@@ -1,4 +1,6 @@
 
+// TODO: Necesitamos crear un componente para listar las citas. Uno llamado ApointmentItem y mejorar los estilos.
+
 const AppointmentsList = ({ appointments }) => {
   return (
     <section className="w-96 p-4">
