@@ -35,6 +35,8 @@ function App() {
     }
   ]
 
+  // TODO: añadir persistencia a este todo app para que las las tareas esten siempre visibles en el navegador una vez creadas. Ayuda, usen localstorage.
+
   const [todos, setTodos] = useState(DEFAULT_TODOS)
 
   const handleCompleted = (event) => {
