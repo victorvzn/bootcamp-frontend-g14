@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import Header from './components/Header'
 import Form from "./components/Form"
+import Stats from "./components/Stats"
 
 function App() {
 
@@ -63,12 +64,6 @@ function App() {
     setTodos(newTodos)
   }
 
-  const completedTodos = () => {
-    const completed = todos.filter(todo => todo.completed === true)
-
-    return completed.length
-  }
-
   const handleClearTodos = (event) => {
     const newTodos = todos.filter(todo => todo.completed === false)
 
@@ -84,15 +79,10 @@ function App() {
 
         <Form onSubmit={handleSubmit} />
 
-        <div className="flex justify-between">
-          <span className="">{completedTodos()} / {todos.length}</span>
-          <button
-            className="bg-blue-500 rounded-lg px-2 py-1 text-white"
-            onClick={handleClearTodos}
-          >
-            Limpiar tareas completadas
-          </button>
-        </div>
+        <Stats
+          todos={todos}
+          onClearTodos={handleClearTodos}
+        />
 
         <section className="mt-5">
           <ul className="flex flex-col gap-3">
