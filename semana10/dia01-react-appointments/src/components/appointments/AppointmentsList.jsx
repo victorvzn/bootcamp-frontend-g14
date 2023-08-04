@@ -5,7 +5,7 @@ const AppointmentsList = ({ appointments }) => {
   if (appointments.length === 0) {
     return (
       <section className="w-1/2 p-4 bg-white rounded-lg">
-        <h2 className="text-2xl text-center mb-4">Listado de Pacientes</h2>
+        <h2 className="text-2xl text-center mb-4">Listado de Citas</h2>
 
         <div className="flex justify-center items-center gap-3 h-96 text-2xl">
           No hay citas.
@@ -16,7 +16,7 @@ const AppointmentsList = ({ appointments }) => {
 
   return (
     <section className="w-1/2 p-4 bg-white rounded-lg">
-      <h2 className="text-2xl text-center mb-4">Listado de Pacientes</h2>
+      <h2 className="text-2xl text-center mb-4">Listado de Citas</h2>
 
       <div className="flex flex-col gap-3">
         {appointments.map(appointment => {
@@ -57,6 +57,25 @@ const AppointmentsList = ({ appointments }) => {
                 <div>
                   <strong>Sintomas:</strong> {appointment.symptoms}
                 </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <a
+                  href="#"
+                  className="p-2 bg-green-600 text-white rounded-lg cursor-pointer"
+                >
+                  Confirmar cita
+                </a>
+                <button
+                  className="p-2 bg-sky-600 text-white rounded-lg cursor-pointer"
+                >
+                  Editar
+                </button>
+                <button
+                  className="p-2 bg-red-600 text-white rounded-lg cursor-pointer"
+                >
+                  Eliminar
+                </button>
               </div>
             </div>
           )
