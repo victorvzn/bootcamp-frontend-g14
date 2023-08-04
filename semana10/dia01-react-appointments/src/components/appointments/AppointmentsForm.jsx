@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const AppointmentsForm = ({ onSaveAppointment }) => {
+const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
   const INITIAL_FORM_STATE = {
     id: '',
     petName: '',
@@ -12,6 +12,11 @@ const AppointmentsForm = ({ onSaveAppointment }) => {
   }
 
   const [form, setForm] = useState(INITIAL_FORM_STATE)
+
+  useEffect(() => {
+    // console.log('Estoy en el form')
+    setForm(appointment)
+  }, [appointment])
 
   const handleChange = (event) => {
     // const name = event.target.name
@@ -93,6 +98,8 @@ const AppointmentsForm = ({ onSaveAppointment }) => {
           value={form.symptoms}
           onChange={handleChange}
         />
+
+        {/* TODO: Al guardar una cita editada debe actualizar los datos en la lista de citas */}
         <input
           className="border p-2 bg-green-800 text-white rounded-md cursor-pointer"
           type="submit"
