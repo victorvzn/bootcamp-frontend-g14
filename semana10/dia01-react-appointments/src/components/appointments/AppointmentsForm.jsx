@@ -94,7 +94,7 @@ const AppointmentsForm = ({ onSaveAppointment }) => {
         />
       </form>
 
-      {JSON.stringify(form)}
+      <pre>{JSON.stringify(form, null, 2)}</pre>
     </section>
   )
 }
