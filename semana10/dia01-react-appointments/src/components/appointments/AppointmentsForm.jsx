@@ -15,7 +15,9 @@ const AppointmentsForm = ({ onSaveAppointment, appointment }) => {
 
   useEffect(() => {
     // console.log('Estoy en el form')
-    setForm(appointment)
+    if (Object.keys(appointment).length > 0) {
+      setForm(appointment)
+    }
   }, [appointment])
 
   const handleChange = (event) => {
