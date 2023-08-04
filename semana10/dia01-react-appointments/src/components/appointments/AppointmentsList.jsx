@@ -1,7 +1,7 @@
 
 // TODO: Necesitamos crear un componente para listar las citas. Uno llamado ApointmentItem y mejorar los estilos.
 
-const AppointmentsList = ({ appointments }) => {
+const AppointmentsList = ({ appointments, onRemove }) => {
   if (appointments.length === 0) {
     return (
       <section className="w-1/2 p-4 bg-white rounded-lg">
@@ -22,7 +22,7 @@ const AppointmentsList = ({ appointments }) => {
         {appointments.map(appointment => {
           return (
             <div
-              key={appointment.petName}
+              key={appointment.id}
               className="border-2 border-sky-500 p-3 rounded-lg bg-sky-300 flex justify-between"
             >
               <div>
@@ -73,6 +73,7 @@ const AppointmentsList = ({ appointments }) => {
                 </button>
                 <button
                   className="p-2 bg-red-600 text-white rounded-lg cursor-pointer"
+                  onClick={() => onRemove(appointment.id)}
                 >
                   Eliminar
                 </button>

@@ -2,6 +2,7 @@ import { useState } from "react"
 
 const AppointmentsForm = ({ onSaveAppointment }) => {
   const INITIAL_FORM_STATE = {
+    id: '',
     petName: '',
     petAge: '',
     ownerName: '',
@@ -24,7 +25,12 @@ const AppointmentsForm = ({ onSaveAppointment }) => {
   const handleSaveAppointment = (e) => {
     e.preventDefault()
 
-    onSaveAppointment(form)
+    const newAppointment = {
+      ...form,
+      id: crypto.randomUUID()
+    }
+
+    onSaveAppointment(newAppointment)
 
     setForm(INITIAL_FORM_STATE)
   }
