@@ -4,7 +4,7 @@ import { TbSquareRoundedPlusFilled } from "react-icons/tb";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center w-[740px] m-auto bg-slate-900 mt-20">
+    <header className="flex justify-between items-center w-[740px] m-auto bg-slate-900 my-20">
       <div className="text-white">
         <h1 className="text-4xl font-extrabold">Invoices</h1>
         <span>There are 7 total invoices</span>
