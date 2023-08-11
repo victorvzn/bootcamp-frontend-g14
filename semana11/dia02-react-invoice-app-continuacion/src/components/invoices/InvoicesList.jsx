@@ -48,9 +48,10 @@ const InvoicesList = ({ invoices }) => {
                     />}
                   {invoice.status === 'draft' &&
                     <BaseTag
+                      className='text-slate-100'
                       label={invoice.status}
-                      background='bg-slatered-400/20'
-                      textColor='text-slatered-400'
+                      background='bg-slate-400/20'
+                      textColor='text-slater-400'
                     />}
                 </div>
                 <div className="w-10 flex justify-center">
