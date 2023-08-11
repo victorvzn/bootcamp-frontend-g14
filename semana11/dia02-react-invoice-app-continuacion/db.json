@@ -1,0 +1,306 @@
+{
+  "statuses": [
+    {
+      "id": "d7909551-c573-42c8-894b-4af2c62cae26",
+      "name": "paid"
+    },
+    {
+      "id": "a7f8264e-d071-4510-a246-3cf0d82b43fe",
+      "name": "pending"
+    },
+    {
+      "id": "2aa412de-10e7-4ffc-a1a5-07b0ee23e8c6",
+      "name": "draft"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "3bd3285e-9511-4cf4-b956-47c6715934a8",
+      "code": "XM9141",
+      "status": "paid",
+      "bill": {
+        "from": {
+          "streetAddress": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E13EZ",
+          "country": "United Kingdom"
+        },
+        "to": {
+          "client": {
+            "name": "Alex Grim",
+            "email": "alexgrim@mail.com"
+          },
+          "streetAddress": "84 Church Way",
+          "city": "Bradford",
+          "postCode": "BD19PB",
+          "country": "United Kingdom"
+        }
+      },
+      "invoice": {
+        "date": "21 Aug 2021",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Graphic Design"
+        },
+        "grandTotal": 556.00,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Banner Design",
+            "qty": 1,
+            "price": 156.00,
+            "total": 156.00
+          },
+          {
+            "name": "Email Design",
+            "qty": 2,
+            "price": 200.00,
+            "total": 400.00
+          }
+        ]
+      }
+    },
+    {
+      "id": "3bd3285f-9512-4cf4-b957-47c6715934a9",
+      "code": "RT3080",
+      "status": "pending",
+      "bill": {
+        "from": {
+          "streetAddress": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E13EZ",
+          "country": "United Kingdom"
+        },
+        "to": {
+          "client": {
+            "name": "Juensen Huang",
+            "email": "juensenhuang@mail.com"
+          },
+          "streetAddress": "99 Church Way",
+          "city": "Bradford",
+          "postCode": "CC19KK",
+          "country": "United Kingdom"
+        }
+      },
+      "invoice": {
+        "date": "19 Aug 2021",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Graphic Design"
+        },
+        "grandTotal": 1800.90,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Banner Design",
+            "qty": 3,
+            "price": 256.00,
+            "total": 256.00
+          },
+          {
+            "name": "Email Design",
+            "qty": 2,
+            "price": 516.45,
+            "total": 516.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "81a8bd15-959a-4f6f-a5ae-920076fa1d5c",
+      "code": "XM9141",
+      "status": "pending",
+      "bill": {
+        "from": {
+          "streetAddress": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E13EZ",
+          "country": "United Kingdom"
+        },
+        "to": {
+          "client": {
+            "name": "John Morrison",
+            "email": "johnmorrison@mail.com"
+          },
+          "streetAddress": "99 Church Way",
+          "city": "Bradford",
+          "postCode": "CC19KK",
+          "country": "United Kingdom"
+        }
+      },
+      "invoice": {
+        "date": "01 Oct 2021",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Graphic Design"
+        },
+        "grandTotal": 14002.33,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Banner Design",
+            "qty": 3,
+            "price": 256.00,
+            "total": 256.00
+          },
+          {
+            "name": "Email Design",
+            "qty": 2,
+            "price": 516.45,
+            "total": 516.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "577e444e-b1a8-4cd9-9adf-99b3db8fb837",
+      "code": "RT2080",
+      "status": "paid",
+      "bill": {
+        "from": {
+          "streetAddress": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E13EZ",
+          "country": "United Kingdom"
+        },
+        "to": {
+          "client": {
+            "name": "Alyssa Werner",
+            "email": "alyssawerner@mail.com"
+          },
+          "streetAddress": "99 Church Way",
+          "city": "Bradford",
+          "postCode": "CC19KK",
+          "country": "United Kingdom"
+        }
+      },
+      "invoice": {
+        "date": "12 Oct 2021",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Graphic Design"
+        },
+        "grandTotal": 102.04,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Banner Design",
+            "qty": 3,
+            "price": 256.00,
+            "total": 256.00
+          },
+          {
+            "name": "Email Design",
+            "qty": 2,
+            "price": 516.45,
+            "total": 516.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "6d813af1-fb73-4cab-ade4-f263707e3917",
+      "code": "AA1449",
+      "status": "pending",
+      "bill": {
+        "from": {
+          "streetAddress": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E13EZ",
+          "country": "United Kingdom"
+        },
+        "to": {
+          "client": {
+            "name": "Mellisa Clarke",
+            "email": "mellisaclarke@mail.com"
+          },
+          "streetAddress": "99 Church Way",
+          "city": "Bradford",
+          "postCode": "CC19KK",
+          "country": "United Kingdom"
+        }
+      },
+      "invoice": {
+        "date": "14 Oct 2021",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Graphic Design"
+        },
+        "grandTotal": 4032.33,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Banner Design",
+            "qty": 3,
+            "price": 256.00,
+            "total": 256.00
+          },
+          {
+            "name": "Email Design",
+            "qty": 2,
+            "price": 516.45,
+            "total": 516.45
+          }
+        ]
+      }
+    },
+    {
+      "id": "17efeb52-a3a1-49d7-b037-6bc9a3b10dc4",
+      "code": "V2353",
+      "status": "draft",
+      "bill": {
+        "from": {
+          "streetAddress": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E13EZ",
+          "country": "United Kingdom"
+        },
+        "to": {
+          "client": {
+            "name": "Anita Wainwright",
+            "email": "anitawainwright@mail.com"
+          },
+          "streetAddress": "99 Church Way",
+          "city": "Bradford",
+          "postCode": "CC19KK",
+          "country": "United Kingdom"
+        }
+      },
+      "invoice": {
+        "date": "12 Nov 2021",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Graphic Design"
+        },
+        "grandTotal": 3102.04,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": [
+          {
+            "name": "Banner Design",
+            "qty": 3,
+            "price": 256.00,
+            "total": 256.00
+          },
+          {
+            "name": "Email Design",
+            "qty": 2,
+            "price": 516.45,
+            "total": 516.45
+          }
+        ]
+      }
+    }
+  ]
+}
