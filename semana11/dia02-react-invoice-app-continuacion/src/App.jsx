@@ -1,23 +1,9 @@
-import { useEffect, useState } from "react"
-
-import { fetchInvoices } from "./services/invoices"
-import Header from "./components/Header"
-import InvoicesList from "./components/invoices/InvoicesList"
+import { RouterProvider } from "react-router-dom"
+import { PrimaryRouter } from "./routes/PrimaryRouter"
 
 function App() {
-  const [invoices, setInvoices] = useState([])
-
-  useEffect(() => {
-    // fetchInvoices().then(setInvoices)
-    fetchInvoices().then(data => setInvoices(data))
-  }, [])
-
   return (
-    <>
-      <Header />
-
-      <InvoicesList invoices={invoices} />
-    </>
+    <RouterProvider router={PrimaryRouter} />
   )
 }
 

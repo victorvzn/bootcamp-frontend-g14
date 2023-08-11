@@ -1,15 +1,9 @@
 import { formatNumber } from "../../utils"
 import { TbChevronRight } from "react-icons/tb";
 import BaseTag from "../shared/BaseTag";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const InvoicesList = ({ invoices }) => {
-  const types = {
-    paid: 'emarald',
-    pending: 'orange',
-    draft: 'slate'
-  }
-
   return (
     <main className="w-[740px] m-auto flex flex-col gap-5">
       {/* {JSON.stringify(invoices)} */}
@@ -55,7 +49,9 @@ const InvoicesList = ({ invoices }) => {
                     />}
                 </div>
                 <div className="w-10 flex justify-center">
-                  <TbChevronRight />
+                  <Link to={`/invoice/${invoice.id}`}>
+                    <TbChevronRight />
+                  </Link>
                 </div>
               </article>
             )
