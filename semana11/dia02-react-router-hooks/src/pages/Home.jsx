@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([])
@@ -18,13 +19,17 @@ const Home = () => {
     <section className="grid grid-cols-4 w-10/12 mx-auto mt-5 gap-4">
       {
         pokemons.map(pokemon => {
+          const id = pokemon.url.split('/').at(-2)
+          const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
           return (
-            <article
-              key={pokemon.url}
-              className="capitalize text-center border rounded-lg bg-yellow-600 p-4"
-            >
-              {pokemon.name}
-            </article>
+            <Link to={`/pokemon/${id}`} key={pokemon.url}>
+              <article
+                className="capitalize text-center border rounded-lg bg-yellow-600 p-4"
+              >
+                <img src={image} />
+                {pokemon.name}
+              </article>
+            </Link>
           )
         })
       }

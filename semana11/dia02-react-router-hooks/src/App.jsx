@@ -6,6 +6,7 @@ import PrimaryLayout from './layouts/PrimaryLayout'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import PokemonDetail from './pages/PokemonDetail'
 
 function App() {
   const PrimaryRouter = createBrowserRouter([
@@ -24,13 +25,17 @@ function App() {
         {
           path: '/register',
           element: <Register />
+        },
+        {
+          path: '/pokemon/:id',
+          element: <PokemonDetail />
         }
       ]
     }
   ])
 
   return (
-    <RouterProvider router={PrimaryRouter} />
+      <RouterProvider router={PrimaryRouter} />
   )
 }
 
