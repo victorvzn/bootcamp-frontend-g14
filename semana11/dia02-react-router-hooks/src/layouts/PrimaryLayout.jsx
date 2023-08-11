@@ -14,6 +14,9 @@ const PrimaryLayout = () => {
       <main>
         <Outlet />
       </main>
+      <footer>
+        Agosto 2023
+      </footer>
     </>
   )
 }
