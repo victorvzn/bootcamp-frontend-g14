@@ -9,6 +9,7 @@ const PrimaryLayout = () => {
           <Link to='/'>Home</Link>
           <Link to='/login'>Login</Link>
           <Link to='/register'>Register</Link>
+          <Link to='/not-found-page'>Not Found</Link>
         </nav>
       </header>
       <main>

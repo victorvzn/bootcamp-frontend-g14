@@ -7,12 +7,14 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import PokemonDetail from './pages/PokemonDetail'
+import ErrorPage from './pages/ErrorPage'
 
 function App() {
   const PrimaryRouter = createBrowserRouter([
     {
       path: '/',
       element: <PrimaryLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
@@ -35,7 +37,7 @@ function App() {
   ])
 
   return (
-      <RouterProvider router={PrimaryRouter} />
+    <RouterProvider router={PrimaryRouter} />
   )
 }
 
