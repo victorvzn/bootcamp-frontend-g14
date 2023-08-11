@@ -34,9 +34,24 @@ const InvoicesList = ({ invoices }) => {
                 {/* <div>{invoice.invoice.grandTotal}</div> */}
                 {/* <div>{invoice.invoice.grandTotal.toLocaleString('en-US')}</div> */}
                 <div>
-                  {invoice.status === 'paid' && <BaseTag label={invoice.status} type='emerald' />}
-                  {invoice.status === 'pending' && <BaseTag label={invoice.status} type='orange' />}
-                  {invoice.status === 'draft' && <BaseTag label={invoice.status} type='slatered' />}
+                  {invoice.status === 'paid' &&
+                    <BaseTag
+                      label={invoice.status}
+                      background='bg-emerald-400/20'
+                      textColor='text-emerald-400'
+                    />}
+                  {invoice.status === 'pending' &&
+                    <BaseTag
+                      label={invoice.status}
+                      background='bg-orange-400/20'
+                      textColor='text-orange-400'
+                    />}
+                  {invoice.status === 'draft' &&
+                    <BaseTag
+                      label={invoice.status}
+                      background='bg-slatered-400/20'
+                      textColor='text-slatered-400'
+                    />}
                 </div>
                 <div className="w-10 flex justify-center">
                   <TbChevronRight />

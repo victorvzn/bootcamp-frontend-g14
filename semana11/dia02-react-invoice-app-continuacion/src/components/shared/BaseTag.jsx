@@ -1,9 +1,9 @@
 import React from 'react'
 
-const BaseTag = ({ label, type }) => {
+const BaseTag = ({ label, background, textColor }) => {
   return (
-    <div className={`py-3 rounded-md text-center capitalize font-extrabold min-w-[120px] bg-${type}-400/20`}>
-      <span className={`text-3xl mr-2 text-${type}-400`}>•</span>
+    <div className={`py-3 rounded-md text-center capitalize font-extrabold min-w-[120px] ${background}`}>
+      <span className={`text-3xl mr-2 ${textColor}`}>•</span>
       {label}
     </div>
   )
