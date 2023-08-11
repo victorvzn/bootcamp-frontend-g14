@@ -1,4 +1,4 @@
-import { Link, RouterProvider } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 
 import PrimaryLayout from './layouts/PrimaryLayout'

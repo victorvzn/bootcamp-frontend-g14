@@ -15,7 +15,7 @@ const PokemonDetail = () => {
     getPokemon(id)
   }, [])
 
-  if (!pokemon) return
+  if (!pokemon) return <h1>Not found pokemon</h1>
 
   return (
     <section className='w-10/12 mx-auto mt-5'>
