@@ -1,5 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
+
 import PrimaryLayout from '../layouts/PrimaryLayout'
+
 import InvoicesPage from '../pages/InvoicesPage'
 import NewInvoicePage from '../pages/NewInvoicePage'
 import InvoiceDetailPage from '../pages/InvoiceDetailPage'
