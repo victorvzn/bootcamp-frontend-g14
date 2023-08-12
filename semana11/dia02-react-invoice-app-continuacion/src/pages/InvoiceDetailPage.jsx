@@ -87,17 +87,17 @@ const InvoiceDetailPage = () => {
         <header className="flex justify-between">
           <div className="text-3xl">
             <span className="text-slate-400">#</span>
-            <span className="font-extrabold">XM941</span>
+            <span className="font-extrabold">{invoice.code}</span>
             <div className="text-xl mt-1">
-              Grhaphic design
+              {invoice.invoice.project.description}
             </div>
           </div>
 
-          <div className="text-base">
-            <div>Line1</div>
-            <div>Line2</div>
-            <div>Line3</div>
-            <div>Line4</div>
+          <div className="text-base text-right">
+            <div>{invoice.bill.from.streetAddress}</div>
+            <div>{invoice.bill.from.city}</div>
+            <div>{invoice.bill.from.postCode}</div>
+            <div>{invoice.bill.from.country}</div>
           </div>
         </header>
 
