@@ -1,10 +1,36 @@
 import { Link, useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+
+import { getInvoice } from "../services/invoices"
 
 import BaseTag from "../components/shared/BaseTag"
 import BaseButton from "../components/shared/BaseButton"
 
 const InvoiceDetailPage = () => {
   const { id } = useParams()
+  const [invoice, setInvoice] = useState(null)
+
+  const INVOICE_STATUS = {
+    'paid': {
+      background: 'bg-emerald-400/20',
+      textColor: 'text-emerald-400'
+    },
+    'pending': {
+      background: 'bg-orange-400/20',
+      textColor: 'text-orange-400'
+    },
+    'draft': {
+      background: 'bg-slate-400/20',
+      textColor: 'text-slater-400'
+    },
+  }
+
+  useEffect(() => {
+    // getInvoice().then(setInvoice)
+    getInvoice(id).then(data => setInvoice(data))
+  }, [])
+
+  if (!invoice) return <h1>Not found invoice</h1>
 
   return (
     <>
@@ -23,14 +49,15 @@ const InvoiceDetailPage = () => {
         </Link>
       </nav>
 
+      <div className="text-white">{JSON.stringify(invoice)}</div>
+
       <header className="w-[940px] mx-auto bg-[#1f213a] py-3 px-8 mt-10 rounded-lg flex justify-between">
         <div className="flex items-center text-white gap-3">
           <h3>Status</h3>
-        <BaseTag
-            className='text-emerald-100'
-            label="Pending"
-            background='bg-emerald-400/20'
-            textColor='text-emerald-400'
+          <BaseTag
+            label={invoice.status}
+            background={INVOICE_STATUS[invoice.status].background}
+            textColor={INVOICE_STATUS[invoice.status].textColor}
           />
         </div>
 
