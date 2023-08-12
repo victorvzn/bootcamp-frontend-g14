@@ -9,7 +9,7 @@ import BaseButton from "../components/shared/BaseButton"
 
 import { TbChevronLeft } from "react-icons/tb";
 
-const InvoiceDetailPage = () => {
+const InvoiceEditPage = () => {
   const { id } = useParams()
   const [invoice, setInvoice] = useState(null)
 
@@ -65,14 +65,12 @@ const InvoiceDetailPage = () => {
         </div>
 
         <div className="flex gap-3">
-          <Link to={`/invoice/${id}/edit`}>
-            <BaseButton
-              background="bg-slate-400"
-              textColor="text-white"
-            >
-              Edit
-            </BaseButton>
-          </Link>
+          <BaseButton
+            background="bg-slate-400"
+            textColor="text-white"
+          >
+            Edit
+          </BaseButton>
           <BaseButton
             background="bg-red-400"
             textColor="text-white"
@@ -171,4 +169,4 @@ const InvoiceDetailPage = () => {
   )
 }
 
-export default InvoiceDetailPage
+export default InvoiceEditPage

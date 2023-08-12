@@ -5,6 +5,7 @@ import PrimaryLayout from '../layouts/PrimaryLayout'
 import InvoicesPage from '../pages/InvoicesPage'
 import NewInvoicePage from '../pages/NewInvoicePage'
 import InvoiceDetailPage from '../pages/InvoiceDetailPage'
+import InvoiceEditPage from '../pages/InvoiceEditPage'
 
 export const PrimaryRouter = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const PrimaryRouter = createBrowserRouter([
       {
         path: '/invoice/:id',
         element: <InvoiceDetailPage />
+      },
+      {
+        path: '/invoice/:id/edit',
+        element: <InvoiceEditPage />
       }
     ]
   }
