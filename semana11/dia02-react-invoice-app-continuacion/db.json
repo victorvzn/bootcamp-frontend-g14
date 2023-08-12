@@ -37,7 +37,8 @@
         }
       },
       "invoice": {
-        "date": "21 Aug 2021",
+        "date": "21 Jul 2023",
+        "paymentDue": "21 Aug 2023",
         "paymentTerms": "Next 30 Days",
         "project": {
           "description": "Graphic Design 1"
@@ -48,12 +49,14 @@
         },
         "items": [
           {
+            "id": 1,
             "name": "Banner Design",
             "qty": 1,
             "price": 156.00,
             "total": 156.00
           },
           {
+            "id": 2,
             "name": "Email Design",
             "qty": 2,
             "price": 200.00,
@@ -85,7 +88,8 @@
         }
       },
       "invoice": {
-        "date": "19 Aug 2021",
+        "date": "19 Jul 2023",
+        "paymentDue": "19 Aug 2023",
         "paymentTerms": "Next 30 Days",
         "project": {
           "description": "Graphic Design 2"
@@ -96,12 +100,14 @@
         },
         "items": [
           {
+            "id": 1,
             "name": "Banner Design",
             "qty": 3,
             "price": 256.00,
             "total": 256.00
           },
           {
+            "id": 2,
             "name": "Email Design",
             "qty": 2,
             "price": 516.45,
@@ -133,7 +139,8 @@
         }
       },
       "invoice": {
-        "date": "01 Oct 2021",
+        "date": "01 Jul 2023",
+        "paymentDue": "01 Oct 2023",
         "paymentTerms": "Next 30 Days",
         "project": {
           "description": "Graphic Design 3"
@@ -144,12 +151,14 @@
         },
         "items": [
           {
+            "id": 1,
             "name": "Banner Design",
             "qty": 3,
             "price": 256.00,
             "total": 256.00
           },
           {
+            "id": 2,
             "name": "Email Design",
             "qty": 2,
             "price": 516.45,
@@ -181,7 +190,8 @@
         }
       },
       "invoice": {
-        "date": "12 Oct 2021",
+        "date": "12 Jul 2023",
+        "paymentDue": "12 Oct 2023",
         "paymentTerms": "Next 30 Days",
         "project": {
           "description": "Graphic Design 4"
@@ -192,12 +202,14 @@
         },
         "items": [
           {
+            "id": 1,
             "name": "Banner Design",
             "qty": 3,
             "price": 256.00,
             "total": 256.00
           },
           {
+            "id": 2,
             "name": "Email Design",
             "qty": 2,
             "price": 516.45,
@@ -229,7 +241,8 @@
         }
       },
       "invoice": {
-        "date": "14 Oct 2021",
+        "date": "14 Jul 2023",
+        "paymentDue": "14 Oct 2023",
         "paymentTerms": "Next 30 Days",
         "project": {
           "description": "Graphic Design 5"
@@ -240,12 +253,14 @@
         },
         "items": [
           {
+            "id": 1,
             "name": "Banner Design",
             "qty": 3,
             "price": 256.00,
             "total": 256.00
           },
           {
+            "id": 2,
             "name": "Email Design",
             "qty": 2,
             "price": 516.45,
@@ -277,7 +292,8 @@
         }
       },
       "invoice": {
-        "date": "12 Nov 2021",
+        "date": "12 Jul 2023",
+        "paymentDue": "12 Nov 2023",
         "paymentTerms": "Next 30 Days",
         "project": {
           "description": "Graphic Design 6"
@@ -288,12 +304,14 @@
         },
         "items": [
           {
+            "id": 1,
             "name": "Banner Design",
             "qty": 3,
             "price": 256.00,
             "total": 256.00
           },
           {
+            "id": 2,
             "name": "Email Design",
             "qty": 2,
             "price": 516.45,

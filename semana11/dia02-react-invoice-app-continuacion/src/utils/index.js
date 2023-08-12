@@ -1,2 +1,8 @@
 
-export const formatNumber = (number) => new Intl.NumberFormat('en-US').format(number)
+export const formatNumber = (number) => {
+  const locales = 'en-US'
+  const options = {
+    minimumFractionDigits: 2
+  }
+  return new Intl.NumberFormat(locales, options).format(number)
+}

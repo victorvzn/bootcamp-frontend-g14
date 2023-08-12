@@ -21,7 +21,7 @@ const InvoicesList = ({ invoices }) => {
                 </div>
                 <div className="w-44 font-semibold">{invoice.invoice.date}</div>
                 <div className="w-44 font-semibold">{invoice.bill.to.client.name}</div>
-                <div className="w-44 text-3xl font-extrabold">
+                <div className="w-44 text-3xl font-extrabold text-right">
                   {invoice.invoice.currency.symbol}
                   {formatNumber(invoice.invoice.grandTotal)}
                 </div>

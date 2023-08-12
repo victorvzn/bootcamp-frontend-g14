@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import { getInvoice } from "../services/invoices"
+import { formatNumber } from "../utils"
 
 import BaseTag from "../components/shared/BaseTag"
 import BaseButton from "../components/shared/BaseButton"
@@ -49,7 +50,7 @@ const InvoiceDetailPage = () => {
         </Link>
       </nav>
 
-      <div className="text-white">{JSON.stringify(invoice)}</div>
+      {/* <div className="text-white">{JSON.stringify(invoice)}</div> */}
 
       <header className="w-[940px] mx-auto bg-[#1f213a] py-3 px-8 mt-10 rounded-lg flex justify-between">
         <div className="flex items-center text-white gap-3">
@@ -105,56 +106,59 @@ const InvoiceDetailPage = () => {
           <div className="flex flex-col gap-10">
             <div className="">
               <div className="text-lg mt-1">Invoice Date</div>
-              <div className="text-xl mt-1 font-extrabold">21 Agu 2021</div>
+              <div className="text-xl mt-1 font-extrabold">{invoice.invoice.date}</div>
             </div>
             <div className="">
-              <div className="text-lg mt-1">Payment Date</div>
-              <div className="text-xl mt-1 font-extrabold">21 Agu 2021</div>
+              <div className="text-lg mt-1">Payment Due</div>
+              <div className="text-xl mt-1 font-extrabold">{invoice.invoice.paymentDue}</div>
             </div>
           </div>
           <div>
             <div className="text-lg mt-1">Bill To</div>
-            <div className="text-xl mt-1 font-extrabold">Alex Grim</div>
-            <div className="text-base mt-1">Line 1</div>
-            <div className="text-base mt-1">Line 2</div>
-            <div className="text-base mt-1">Line 3</div>
-            <div className="text-base mt-1">Line 4</div>
+            <div className="text-xl mt-1 font-extrabold">{invoice.bill.to.client.name}</div>
+            <div className="text-base mt-1">{invoice.bill.to.client.streetAddress}</div>
+            <div className="text-base mt-1">{invoice.bill.to.city}</div>
+            <div className="text-base mt-1">{invoice.bill.to.postCode}</div>
+            <div className="text-base mt-1">{invoice.bill.to.country}</div>
           </div>
           <div>
             <div className="text-lg mt-1">Send To</div>
-            <div className="text-xl mt-1 font-extrabold">alexgrim@mail.com</div>
+            <div className="text-xl mt-1 font-extrabold">{invoice.bill.to.client.email}</div>
           </div>
         </section>
 
         <table className="bg-[#252945] w-full rounded-lg mt-10">
           <thead>
             <tr>
-              <td className="p-6 text-left">Item Name</td>
-              <td className="p-6">QTY.</td>
-              <td className="p-6">Price</td>
-              <td className="p-6">Total</td>
+              <td className="p-6 text-left w-1/2">Item Name</td>
+              <td className="p-6 w-1/6">QTY.</td>
+              <td className="p-6 w-1/6">Price</td>
+              <td className="p-6 w-1/5">Total</td>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="px-6 py-3">xyz</td>
-              <td className="px-6 py-3">xyz</td>
-              <td className="px-6 py-3">xyz</td>
-              <td className="px-6 py-3">xyz</td>
-            </tr>
-            <tr>
-              <td className="px-6 py-3">xyz</td>
-              <td className="px-6 py-3">xyz</td>
-              <td className="px-6 py-3">xyz</td>
-              <td className="px-6 py-3">xyz</td>
-            </tr>
+            {invoice.invoice.items.map(item => {
+              return (
+                <tr key={item.id}>
+                  <td className="px-6 py-3">{item.name}</td>
+                  <td className="px-6 py-3">{item.qty}</td>
+                  <td className="px-6 py-3">{item.price}</td>
+                  <td className="px-6 py-3">
+                    {invoice.invoice.currency.symbol}&nbsp;
+                    {formatNumber(item.total)}
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
           <tfoot className="bg-[#0b0e16]">
             <tr>
-              <td className="px-6 py-10">xyz</td>
-              <td className="px-6 py-10">xyz</td>
-              <td className="px-6 py-10">xyz</td>
-              <td className="px-1 py-10">xyz</td>
+              <td className="px-6 py-10">Amount Due</td>
+              <td className="px-6 py-10"></td>
+              <td className="px-1 py-10 text-4xl font-extrabold" colSpan={2}>
+                {invoice.invoice.currency.symbol}&nbsp;
+                {formatNumber(invoice.invoice.grandTotal)}
+              </td>
             </tr>
           </tfoot>
         </table>
