@@ -43,7 +43,7 @@
         "project": {
           "description": "Graphic Design 1"
         },
-        "grandTotal": 556.00,
+        "grandTotal": 556,
         "currency": {
           "symbol": "$"
         },
@@ -52,15 +52,15 @@
             "id": 1,
             "name": "Banner Design",
             "qty": 1,
-            "price": 156.00,
-            "total": 156.00
+            "price": 156,
+            "total": 156
           },
           {
             "id": 2,
             "name": "Email Design",
             "qty": 2,
-            "price": 200.00,
-            "total": 400.00
+            "price": 200,
+            "total": 400
           }
         ]
       }
@@ -94,7 +94,7 @@
         "project": {
           "description": "Graphic Design 2"
         },
-        "grandTotal": 1800.90,
+        "grandTotal": 1800.9,
         "currency": {
           "symbol": "$"
         },
@@ -103,8 +103,8 @@
             "id": 1,
             "name": "Banner Design",
             "qty": 3,
-            "price": 256.00,
-            "total": 256.00
+            "price": 256,
+            "total": 256
           },
           {
             "id": 2,
@@ -154,8 +154,8 @@
             "id": 1,
             "name": "Banner Design",
             "qty": 3,
-            "price": 256.00,
-            "total": 256.00
+            "price": 256,
+            "total": 256
           },
           {
             "id": 2,
@@ -205,8 +205,8 @@
             "id": 1,
             "name": "Banner Design",
             "qty": 3,
-            "price": 256.00,
-            "total": 256.00
+            "price": 256,
+            "total": 256
           },
           {
             "id": 2,
@@ -256,8 +256,8 @@
             "id": 1,
             "name": "Banner Design",
             "qty": 3,
-            "price": 256.00,
-            "total": 256.00
+            "price": 256,
+            "total": 256
           },
           {
             "id": 2,
@@ -307,8 +307,8 @@
             "id": 1,
             "name": "Banner Design",
             "qty": 3,
-            "price": 256.00,
-            "total": 256.00
+            "price": 256,
+            "total": 256
           },
           {
             "id": 2,
@@ -319,6 +319,41 @@
           }
         ]
       }
+    },
+    {
+      "code": "XXXXX",
+      "status": "draft",
+      "bill": {
+        "from": {
+          "streetAddress": "Av. Sol 123",
+          "city": "Chiclayo",
+          "postCode": "14001",
+          "country": "-"
+        },
+        "to": {
+          "client": {
+            "name": "Victor",
+            "email": "victor@gmail.com"
+          },
+          "streetAddress": "Xyz 133",
+          "city": "Trujillo",
+          "postCode": "11001",
+          "country": "-"
+        }
+      },
+      "invoice": {
+        "date": "2023-08-14",
+        "paymentTerms": "Next 30 Days",
+        "project": {
+          "description": "Ejemplo de invoice"
+        },
+        "grandTotal": 0,
+        "currency": {
+          "symbol": "$"
+        },
+        "items": []
+      },
+      "id": "HEOMdB_"
     }
   ]
 }

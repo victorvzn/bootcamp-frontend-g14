@@ -7,6 +7,8 @@ import { formatNumber } from "../utils"
 import BaseTag from "../components/shared/BaseTag"
 import BaseButton from "../components/shared/BaseButton"
 
+import { TbChevronLeft } from "react-icons/tb";
+
 const InvoiceDetailPage = () => {
   const { id } = useParams()
   const [invoice, setInvoice] = useState(null)
@@ -44,9 +46,9 @@ const InvoiceDetailPage = () => {
       <nav className="w-[940px] mx-auto mt-20">
         <Link
           to='/'
-          className="text-white font-bold"
+          className="text-white font-bold flex gap-3 items-center "
         >
-          Go home
+          <TbChevronLeft /> Go home
         </Link>
       </nav>
 
