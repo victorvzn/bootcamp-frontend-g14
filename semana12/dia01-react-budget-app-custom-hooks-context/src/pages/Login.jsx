@@ -2,6 +2,11 @@ import { useState } from "react"
 
 import { useNavigate } from 'react-router-dom'
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
+
 const Login = () => {
   const [form, setForm] = useState({
     email: '',
@@ -19,26 +24,28 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const email = form.email
+    const password = form.password
     
-    const url = 'https://64dd6d6a825d19d9bfb1280b.mockapi.io/api/v1/users'
+    const url = `https://64dd6d6a825d19d9bfb1280b.mockapi.io/api/v1/users?email=${email}&password=${password}`
 
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form)
-    }
-
-    const response = await fetch(url, options)
+    const response = await fetch(url)
 
     const data = await response.json()
 
     console.log(data)
 
     setForm({ email: '', password: '' })
-
-    navigate('/')
+    
+    if (data.length === 1) {
+      navigate('/')
+    } else {
+      MySwal.fire({
+        icon: 'error',
+        title: 'Credenciales incorrectas!'
+      })
+    }
   }
 
   return (
