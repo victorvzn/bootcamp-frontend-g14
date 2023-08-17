@@ -39,6 +39,12 @@ const Login = () => {
     setForm({ email: '', password: '' })
     
     if (data.length === 1) {
+      const cloneData =  { ...data[0] }
+      
+      delete cloneData.password
+
+      localStorage.setItem('auth', JSON.stringify(cloneData))
+
       navigate('/')
     } else {
       MySwal.fire({
