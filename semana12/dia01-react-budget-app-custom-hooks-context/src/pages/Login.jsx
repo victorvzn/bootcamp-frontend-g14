@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
+import useAuth from "../hooks/useAuth"
+
 const MySwal = withReactContent(Swal)
 
 const Login = () => {
@@ -14,6 +16,8 @@ const Login = () => {
   })
 
   const navigate = useNavigate()
+
+  const { setAuth } = useAuth()
 
   const handleChange = (event) => {
     const value = event.target.value
@@ -43,7 +47,8 @@ const Login = () => {
       
       delete cloneData.password
 
-      localStorage.setItem('auth', JSON.stringify(cloneData))
+      // localStorage.setItem('auth', JSON.stringify(cloneData))
+      setAuth(cloneData)
 
       navigate('/')
     } else {
