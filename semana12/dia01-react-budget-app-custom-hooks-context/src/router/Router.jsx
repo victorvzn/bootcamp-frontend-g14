@@ -5,7 +5,11 @@ import LayoutBase from '../layouts/LayoutBase'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+
 import PrivateRoute from './PrivateRoute'
+
+import NewBudget from '../pages/NewBudget'
+import NewExpense from '../pages/NewExpense'
 
 import { UserProvider } from '../context/UserContext'
 
@@ -18,6 +22,8 @@ const Router = () => {
 
             <Route element={<PrivateRoute />}>
               <Route path='/' element={<Home />} />
+              <Route path='/new-budget' element={<NewBudget />} />
+              <Route path='/new-expense' element={<NewExpense />} />
             </Route>
 
             <Route path='/login' element={<Login />} />

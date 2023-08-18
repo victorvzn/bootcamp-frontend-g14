@@ -29,6 +29,8 @@ const LayoutBase = (props) => {
             {user?.email && (
               <>
                 <Link to='/'>Home</Link>
+                <Link to='/new-budget'>New Budget</Link>
+                <Link to='/new-expense'>New expense</Link>
                 <button onClick={handleLogout}>Logout</button>
               </>
             )}

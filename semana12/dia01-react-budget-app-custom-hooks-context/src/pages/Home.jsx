@@ -1,6 +1,13 @@
 const Home = () => {
   return (
-    <h1 className="text-6xl">Budget App</h1>
+    <>
+      <h1 className="text-3xl">Expense list</h1>
+
+      <ul>
+        
+      </ul>
+    </>
+
   )
 }
 
