@@ -1,15 +1,22 @@
+import { useContext } from "react"
+
 import { Link } from 'react-router-dom'
 
 import { useNavigate } from 'react-router-dom'
 
-import useAuth from "../hooks/useAuth"
+// import useAuth from "../hooks/useAuth"
+
+import { UserContext } from "../context/UserContext"
 
 const LayoutBase = (props) => {
-  const { logout, isAuth } = useAuth()
+  const { user, cleanUser } = useContext(UserContext)
+
+  // const { logout, isAuth } = useAuth()
   const navigate = useNavigate()
 
   const handleLogout = () => {
-    logout()
+    // logout()
+    cleanUser()
     navigate('/login')
   }
 
@@ -19,14 +26,14 @@ const LayoutBase = (props) => {
         <div className='container mx-auto flex justify-between'>
           <h1 className='font-bold'>Budget App</h1>
           <nav className='flex gap-3'>
-            {isAuth && (
+            {user?.email && (
               <>
                 <Link to='/'>Home</Link>
                 <button onClick={handleLogout}>Logout</button>
               </>
             )}
 
-            {!isAuth && (
+            {!user?.email && (
               <>
                 <Link to='/login'>Login</Link>
                 <Link to='/register'>Register</Link>

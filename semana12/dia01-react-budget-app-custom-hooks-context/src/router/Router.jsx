@@ -5,18 +5,27 @@ import LayoutBase from '../layouts/LayoutBase'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+import PrivateRoute from './PrivateRoute'
+
+import { UserProvider } from '../context/UserContext'
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <LayoutBase>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
-      </LayoutBase>
-    </BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
+        <LayoutBase>
+          <Routes>
+
+            <Route element={<PrivateRoute />}>
+              <Route path='/' element={<Home />} />
+            </Route>
+
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </LayoutBase>
+      </BrowserRouter>
+    </UserProvider>
   )
 }
 

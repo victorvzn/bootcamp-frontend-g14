@@ -1,15 +1,19 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 
 import { useNavigate } from 'react-router-dom'
 
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-import useAuth from "../hooks/useAuth"
+// import useAuth from "../hooks/useAuth"
+
+import { UserContext } from "../context/UserContext"
 
 const MySwal = withReactContent(Swal)
 
 const Login = () => {
+  const { storeUser } = useContext(UserContext)
+
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -17,7 +21,7 @@ const Login = () => {
 
   const navigate = useNavigate()
 
-  const { setAuth } = useAuth()
+  // const { setAuth } = useAuth()
 
   const handleChange = (event) => {
     const value = event.target.value
@@ -47,8 +51,9 @@ const Login = () => {
       
       delete cloneData.password
 
-      // localStorage.setItem('auth', JSON.stringify(cloneData))
-      setAuth(cloneData)
+      // localStorage.setItem('auth', JSON.stringify(cloneData))2
+      // setAuth(cloneData)
+      storeUser(cloneData)
 
       navigate('/')
     } else {
