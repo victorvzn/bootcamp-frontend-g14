@@ -44,6 +44,9 @@ const NewExpense = () => {
           icon: 'success',
           title: 'Expense saved!'
         })
+        .then(() => {
+          navigate('/')
+        })
       })
       .catch((err) => {
         MySwal.fire({
@@ -51,8 +54,6 @@ const NewExpense = () => {
           title: 'Error!'
         })
       })
-
-
   }
 
   return (

@@ -24,4 +24,15 @@ export const createExpense = async (name, amount) => {
   const data = await response.json()
 
   return data.budget
-} 
+}
+
+
+export const fetchExpenses = async () => {
+  const url = `https://64dd6d6a825d19d9bfb1280b.mockapi.io/api/v1/expenses`
+
+  const response = await fetch(url)
+
+  const data = await response.json()
+
+  return data
+}
