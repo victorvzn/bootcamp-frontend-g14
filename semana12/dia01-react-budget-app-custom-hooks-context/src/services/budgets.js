@@ -36,3 +36,22 @@ export const fetchExpenses = async () => {
 
   return data
 }
+
+export const deleteExpense = async (id) => {
+  const url = `https://64dd6d6a825d19d9bfb1280b.mockapi.io/api/v1/expenses/${id}`
+
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }
+
+  const response = await fetch(url, options)
+
+  const data = await response.json()
+
+  console.log(data)
+
+  return data
+}
