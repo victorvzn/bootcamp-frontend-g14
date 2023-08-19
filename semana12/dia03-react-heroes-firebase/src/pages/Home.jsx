@@ -1,15 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { useHero } from '../hooks/useHero'
 
 const Home = () => {
 
-  const { createHero } = useHero()
+  const { createHero, fetchTodos } = useHero()
 
   const [form, setForm] = useState({
     name: '',
     image: '',
   })
+
+  const [heroes, setHeroes] = useState([])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -32,8 +34,13 @@ const Home = () => {
     })
   }
 
+  useEffect(() => {
+    fetchTodos()
+    .then(setHeroes)
+  }, [])
+
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto flex gap-40">
 
       { JSON.stringify(form) }
 
@@ -67,6 +74,20 @@ const Home = () => {
           className=" border px-3 py-2 bg-emerald-400"
         />
       </form>
+
+      {/* <pre>{JSON.stringify(heroes, null, 2)}</pre> */}
+
+      <div className="grid grid-cols-2 gap-4">
+        {heroes.map(heroe => {
+          return (
+            <div key={heroe.docId}>
+              {heroe.name}
+              <img src={heroe.image} width={150} />
+            </div>
+          )
+        })}
+
+      </div>
 
     </div>
   )
