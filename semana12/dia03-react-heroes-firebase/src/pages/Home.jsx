@@ -1,6 +1,11 @@
 import { useState } from "react"
 
+import { useHero } from '../hooks/useHero'
+
 const Home = () => {
+
+  const { createHero } = useHero()
+
   const [form, setForm] = useState({
     name: '',
     image: '',
@@ -12,6 +17,21 @@ const Home = () => {
     setForm({ ...form, [name]: value })
   }
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+    console.log('saving form..')
+
+    const response = await createHero(form)
+
+    console.log(response)
+
+    setForm({
+      name: '',
+      image: '',
+    })
+  }
+
   return (
     <div className="container mx-auto">
 
@@ -19,6 +39,7 @@ const Home = () => {
 
       <form
         className="flex flex-col gap-4 w-60"
+        onSubmit={handleSubmit}
       >
         <h2 className="text-3xl">New Hero</h2>
 

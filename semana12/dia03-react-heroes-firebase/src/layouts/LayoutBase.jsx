@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom'
 
-import { useNavigate } from 'react-router-dom'
-
 import { useUser } from "../hooks/useUser"
 
 const LayoutBase = (props) => {
-  const navigate = useNavigate()
-  const { login, logout } = useUser()
+  const { logout } = useUser()
 
   return (
     <>

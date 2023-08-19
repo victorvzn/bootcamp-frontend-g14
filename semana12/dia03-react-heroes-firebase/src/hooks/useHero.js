@@ -1,8 +1,10 @@
 import { db } from '../services/firebase'
 
-export const useHero = () => {
-  const reference = db.collection('heroes')
+import { collection, addDoc } from 'firebase/firestore'
 
+export const useHero = () => {
+  const reference = collection(db, 'heroes')
+  
   const createHero = async (hero) => {
 
     const newHero = {
@@ -10,7 +12,7 @@ export const useHero = () => {
       image: hero.image
     }
 
-    const response = await reference.add(newHero)
+    const response = await addDoc(reference, newHero)
 
     return {
       id: response.id,
