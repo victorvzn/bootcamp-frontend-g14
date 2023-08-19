@@ -15,11 +15,10 @@ export const useUser = () => {
     navigate('/')
   }
 
-
   const logout = async () => {
     await auth.signOut()
 
-    navigate('/')
+    navigate('/login')
   }
 
   return {

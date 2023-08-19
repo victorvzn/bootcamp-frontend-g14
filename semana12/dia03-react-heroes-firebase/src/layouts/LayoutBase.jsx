@@ -16,7 +16,6 @@ const LayoutBase = (props) => {
           <nav className='flex gap-3'>
             <>
               <Link to='/'>Home</Link>
-              <button onClick={login}>Login</button>
               <button onClick={logout}>Logout</button>
             </>
           </nav>
