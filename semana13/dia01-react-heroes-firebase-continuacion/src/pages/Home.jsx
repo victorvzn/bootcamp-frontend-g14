@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-
 import { useHero } from '../hooks/useHero'
 
 const Home = () => {
@@ -75,7 +74,13 @@ const Home = () => {
               <div className="flex flex-col gap-4 absolute bottom-0 left-0 right-0 h-10 bg-green-400/40 px-3 py-2 font-semibold text-center cursor-default duration-300 hover:h-full hover:text-2xl overflow-hidden overflow-ellipsis">
                 <span className="text-white drop-shadow-xl">{heroe.name ? heroe.name : '-'}</span>
                 <div className="mt-5 flex flex-col gap-2">
-                  <button className="py-2 px-3 bg-blue-600 text-base duration-300 text-white hover:bg-blue-700">Edit</button>
+                  <Link to={`/edit-hero/${heroe.docId}`}>
+                    <button
+                      className="py-2 px-3 bg-blue-600 text-base duration-300 text-white hover:bg-blue-700"
+                    >
+                      Edit
+                    </button>
+                  </Link>
                   <button
                     className="py-2 px-3 bg-red-600 text-base duration-300 text-white hover:bg-red-700"
                     data-id={heroe.docId}

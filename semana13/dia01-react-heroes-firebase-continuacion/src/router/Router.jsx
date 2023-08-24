@@ -4,6 +4,8 @@ import LayoutBase from '../layouts/LayoutBase'
 
 import Home from '../pages/Home'
 import NewHero from '../pages/NewHero'
+import EditHero from '../pages/EditHero'
+
 import Login from '../pages/Login'
 
 const Router = () => {
@@ -13,6 +15,8 @@ const Router = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/new-hero' element={<NewHero />} />
+          <Route path='/edit-hero/:id' element={<EditHero />} />
+
           <Route path='/login' element={<Login />} />
         </Routes>
       </LayoutBase>
