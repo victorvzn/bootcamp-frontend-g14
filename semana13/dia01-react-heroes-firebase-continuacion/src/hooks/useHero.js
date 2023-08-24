@@ -21,15 +21,12 @@ export const useHero = () => {
 
   const removeHero = async (id) => {
     console.log('removeHero', id)
-    
+
     const document = doc(db, 'heroes', id)
 
     const response = await deleteDoc(document)
 
-    console.log(response)
-    return {
-      response
-    }
+    return response
   }
 
   const fetchHeroes = async () => {

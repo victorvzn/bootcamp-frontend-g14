@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
 import { useHero } from '../hooks/useHero'
 
 const Home = () => {
+  const MySwal = withReactContent(Swal)
 
   const { fetchHeroes, removeHero } = useHero()
 
@@ -14,12 +19,34 @@ const Home = () => {
     .then(setHeroes)
   }, [])
 
-  const handleRemove = async (event) => {
+  const handleRemove = (event) => {
     const button = event.target
     const id = button.dataset.id
-    console.log('removing hero...', id)
-    const response = await removeHero(id)
-    console.log(response)
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        removeHero(id)
+          .then((response) => {
+            console.log(response)
+            fetchHeroes().then(setHeroes)
+          })
+        MySwal.fire({
+          icon: 'success',
+          title: 'Your hero has been deleted!',
+          showConfirmButton: false,
+          timer: 2500
+        })
+      }
+    })
   }
 
   return (
