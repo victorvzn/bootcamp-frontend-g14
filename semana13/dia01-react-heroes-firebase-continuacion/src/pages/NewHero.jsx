@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import { useHero } from '../hooks/useHero'
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { toast } from 'sonner'
 
@@ -65,7 +65,7 @@ const NewHero = () => {
         className="flex flex-col gap-4 w-60"
         onSubmit={handleSubmit}
       >
-        <
+        <Link to='/' className="underline">Back to Home</Link>
 
         <h2 className="text-3xl">New Hero</h2>
 
