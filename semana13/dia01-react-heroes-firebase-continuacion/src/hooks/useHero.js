@@ -29,6 +29,10 @@ export const useHero = () => {
     return response
   }
 
+  const getHero =  async () => {
+    
+  }
+
   const fetchHeroes = async () => {
     const q = query(reference)
 
@@ -52,6 +56,7 @@ export const useHero = () => {
   return {
     createHero,
     fetchHeroes,
-    removeHero
+    removeHero,
+    getHero
   }
 }
