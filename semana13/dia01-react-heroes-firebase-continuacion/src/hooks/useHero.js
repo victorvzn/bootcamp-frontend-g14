@@ -1,6 +1,6 @@
 import { db } from '../services/firebase'
 
-import { collection, addDoc, deleteDoc, query, getDocs, doc } from 'firebase/firestore'
+import { collection, addDoc, deleteDoc, query, getDocs, getDoc, doc } from 'firebase/firestore'
 
 export const useHero = () => {
   const reference = collection(db, 'heroes')
@@ -29,8 +29,12 @@ export const useHero = () => {
     return response
   }
 
-  const getHero =  async () => {
-    
+  const getHero =  async (id) => {
+    const docReference = doc(db, 'heroes', id)
+
+    const response = await getDoc(docReference)
+
+    return response.data()
   }
 
   const fetchHeroes = async () => {
