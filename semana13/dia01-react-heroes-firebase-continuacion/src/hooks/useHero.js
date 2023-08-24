@@ -1,6 +1,6 @@
 import { db } from '../services/firebase'
 
-import { collection, addDoc, query, getDocs, getDoc } from 'firebase/firestore'
+import { collection, addDoc, deleteDoc, query, getDocs, doc } from 'firebase/firestore'
 
 export const useHero = () => {
   const reference = collection(db, 'heroes')
@@ -19,7 +19,20 @@ export const useHero = () => {
     }
   }
 
-  const fetchTodos = async () => {
+  const removeHero = async (id) => {
+    console.log('removeHero', id)
+    
+    const document = doc(db, 'heroes', id)
+
+    const response = await deleteDoc(document)
+
+    console.log(response)
+    return {
+      response
+    }
+  }
+
+  const fetchHeroes = async () => {
     const q = query(reference)
 
     const data = await getDocs(q)
@@ -41,6 +54,7 @@ export const useHero = () => {
 
   return {
     createHero,
-    fetchTodos
+    fetchHeroes,
+    removeHero
   }
 }

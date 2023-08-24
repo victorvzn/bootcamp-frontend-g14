@@ -5,14 +5,22 @@ import { useHero } from '../hooks/useHero'
 
 const Home = () => {
 
-  const { fetchTodos } = useHero()
+  const { fetchHeroes, removeHero } = useHero()
 
   const [heroes, setHeroes] = useState([])
 
   useEffect(() => {
-    fetchTodos()
+    fetchHeroes()
     .then(setHeroes)
   }, [])
+
+  const handleRemove = async (event) => {
+    const button = event.target
+    const id = button.dataset.id
+    console.log('removing hero...', id)
+    const response = await removeHero(id)
+    console.log(response)
+  }
 
   return (
     <div className="container mx-auto flex flex-col gap-4">
@@ -41,7 +49,13 @@ const Home = () => {
                 <span className="text-white drop-shadow-xl">{heroe.name ? heroe.name : '-'}</span>
                 <div className="mt-5 flex flex-col gap-2">
                   <button className="py-2 px-3 bg-blue-600 text-base duration-300 text-white hover:bg-blue-700">Edit</button>
-                  <button className="py-2 px-3 bg-red-600 text-base duration-300 text-white hover:bg-red-700">Delete</button>
+                  <button
+                    className="py-2 px-3 bg-red-600 text-base duration-300 text-white hover:bg-red-700"
+                    data-id={heroe.docId}
+                    onClick={handleRemove}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
               <img
