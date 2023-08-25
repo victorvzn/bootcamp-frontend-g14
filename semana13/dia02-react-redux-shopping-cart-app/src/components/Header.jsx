@@ -1,4 +1,6 @@
-import { AppBar, Badge, Box, Button, Container, Drawer, Toolbar, Typography } from "@mui/material"
+import { AppBar, Avatar, Badge, Box, Button, Container, Drawer, IconButton, List, ListItem, ListItemAvatar, ListItemButton, ListItemText, Toolbar, Typography } from "@mui/material"
+import DeleteIcon from '@mui/icons-material/Delete';
+
 import { useState } from "react"
 
 import { useSelector } from "react-redux"
@@ -40,10 +42,33 @@ const Header = () => {
                   },
                 }}
               >
-                <Typography variant="h6">
-                  Cart
+                <Typography variant="h5" sx={{ padding: 2 }}>
+                  Shopping Cart
                 </Typography>
-                {JSON.stringify(cart)}
+                {/* {JSON.stringify(cart)} */}
+                <List>
+                  {cart.map(product => (
+                    <ListItem
+                      key={product.id}
+                      disablePadding
+                      secondaryAction={
+                        <IconButton edge="end">
+                          <DeleteIcon />
+                        </IconButton>
+                      }
+                    >
+                      <ListItemButton>
+                        <ListItemAvatar>
+                          <Avatar src={product.thumbnail} />
+                        </ListItemAvatar>
+                        <ListItemText
+                          primary={product.title}
+                          secondary={product.price}
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
               </Drawer>
             </Badge>
           </Box>
