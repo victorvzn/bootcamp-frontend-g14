@@ -3,13 +3,20 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 import { useState } from "react"
 
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
+import { removeProductFromCart } from '../store/cart/slice'
 
 const Header = () => {
   const [show, setShow] = useState(false)
 
   const cart = useSelector((state) => state.cart)
+
+  const dispatch = useDispatch()
+
+  const removeFromCart = (id) => {
+    dispatch(removeProductFromCart(id))
+  }
   
   return (
     <AppBar position="static">
@@ -20,7 +27,7 @@ const Header = () => {
           </Typography>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Badge badgeContent={9} color="error">
+            <Badge badgeContent={cart.length} color="error">
               <Button
                 variant="contained"
                 color="warning"
@@ -52,7 +59,10 @@ const Header = () => {
                       key={product.id}
                       disablePadding
                       secondaryAction={
-                        <IconButton edge="end">
+                        <IconButton
+                          edge="end"
+                          onClick={() => removeFromCart(product.id)}
+                        >
                           <DeleteIcon />
                         </IconButton>
                       }
