@@ -1,8 +1,13 @@
 import { AppBar, Badge, Box, Button, Container, Drawer, Toolbar, Typography } from "@mui/material"
 import { useState } from "react"
 
+import { useSelector } from "react-redux"
+
+
 const Header = () => {
   const [show, setShow] = useState(false)
+
+  const cart = useSelector((state) => state.cart)
   
   return (
     <AppBar position="static">
@@ -38,6 +43,7 @@ const Header = () => {
                 <Typography variant="h6">
                   Cart
                 </Typography>
+                {JSON.stringify(cart)}
               </Drawer>
             </Badge>
           </Box>
