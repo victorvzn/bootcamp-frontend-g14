@@ -1,6 +1,9 @@
-import { AppBar, Box, Button, Container, Toolbar, Typography } from "@mui/material"
+import { AppBar, Badge, Box, Button, Container, Drawer, Toolbar, Typography } from "@mui/material"
+import { useState } from "react"
 
 const Header = () => {
+  const [show, setShow] = useState(false)
+  
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -10,12 +13,33 @@ const Header = () => {
           </Typography>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Button
-              variant="contained"
-              color="warning"
-            >
-              Cart
-            </Button>
+            <Badge badgeContent={9} color="error">
+              <Button
+                variant="contained"
+                color="warning"
+                onClick={() => setShow(true)}
+              >
+                Cart
+              </Button>
+
+              <Drawer
+                anchor="right"
+                open={show}
+                onClose={() => setShow(false)}
+                sx={{
+                  width: 360  ,
+                  flexShrink: 0,
+                  '& .MuiDrawer-paper': {
+                    width: 360  ,
+                    boxSizing: 'border-box',
+                  },
+                }}
+              >
+                <Typography variant="h6">
+                  Cart
+                </Typography>
+              </Drawer>
+            </Badge>
           </Box>
         </Toolbar>
       </Container>
