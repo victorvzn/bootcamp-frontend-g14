@@ -1,9 +1,15 @@
+import ProductItem from "./ProductItem"
+
+import { ImageList } from "@mui/material"
+
 const ProductList = ({ products }) => {
   return (
-    <div>
-      ProductList
-      {JSON.stringify(products)}
-    </div>
+    <ImageList>
+      {/* {JSON.stringify(products)} */}
+      {products && products.map(product => (
+        <ProductItem key={product.id} product={product} />
+      ))}
+    </ImageList>
   )
 }
 
